@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="App2.ListOfEmployees"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="txtNoOfWorkers" HorizontalAlignment="Left" Margin="0,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="54"  />
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="279" FontSize="24" FontWeight="Bold">
+    		<Run Text="Employee List"/>
+    		<LineBreak/>
+    		<Run/>
+        </TextBlock>
+        <TextBox x:Name="txtNoOfSupervisors" HorizontalAlignment="Left" Margin="0,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="54"  />
+        <TextBox x:Name="txtNoOfManagers" HorizontalAlignment="Left" Margin="0,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="54"  />
+        <TextBox x:Name="txtNoOfBosses" HorizontalAlignment="Left" Margin="0,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="54"  />
+
+    </Grid>
+</Page>
