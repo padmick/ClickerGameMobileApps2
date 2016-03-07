@@ -342,11 +342,8 @@
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\iButton.jpg">
-      <PackagePath>Assets\Images\iButton.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\exitButton.png">
+      <PackagePath>Assets\Images\exitButton.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -374,6 +371,12 @@
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\iButton.jpg">
+      <PackagePath>Assets\Images\iButton.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\App2.xr.xml">
       <PackagePath>App2.xr.xml</PackagePath>

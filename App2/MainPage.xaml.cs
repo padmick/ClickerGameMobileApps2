@@ -39,5 +39,10 @@ namespace App2
             var dialog = new MessageDialog("This is where the helpful things and instructions will go!");
             await dialog.ShowAsync();
         }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }

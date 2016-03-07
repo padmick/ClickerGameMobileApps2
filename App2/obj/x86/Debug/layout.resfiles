@@ -1,5 +1,6 @@
 WinMetadata\Windows.winmd
 ApplicationInsights.config
+Assets\Images\exitButton.png
 Assets\Images\iButton.jpg
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
