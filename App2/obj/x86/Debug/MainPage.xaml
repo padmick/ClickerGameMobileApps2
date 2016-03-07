@@ -12,11 +12,14 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="17*"/>
         </Grid.RowDefinitions>
-        <Image x:ConnectionId='1' x:Name="iButton" Source="Assets/Images/iButton.jpg" Margin="10,161,0,260" Grid.Row="1" Opacity="0.8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123"/>
-        <TextBlock x:ConnectionId='2' x:Name="textBlock" HorizontalAlignment="Center" Margin="55,0,39,0" TextWrapping="Wrap" Text=" Money Clicker Game" VerticalAlignment="Top" Height="70" Width="266" FontSize="24" FontStretch="Expanded" FontWeight="ExtraBlack"/>
-        <Button x:ConnectionId='3' x:Name="btnNavGamePage1" Content="Start Game" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top" Height="59" Width="360" Background="#FF8C9EF2"                               BorderBrush="#FF3A3232" Grid.Row="1"/>
-        <Button x:ConnectionId='4' x:Name="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="14,203,0,0" VerticalAlignment="Top" Height="36"                       Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116"/>
-        <TextBlock x:ConnectionId='5' x:Name="textBlock1" HorizontalAlignment="Right" Margin="326,0,0,49" TextWrapping="Wrap" Text="V0.20" Width="34" FontSize="12" FontWeight="Bold"/>
+        <Image x:ConnectionId='1' x:Name="iButton" Source="Assets/Images/iButton.jpg" Margin="10,161,0,0" Grid.Row="1" Opacity="0.8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+        <Image x:ConnectionId='2' x:Name="exitButton" Source="Assets/Images/exitButton.png" Margin="234,161,10,260" Grid.Row="1" Opacity="0.8" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+        <TextBlock x:ConnectionId='3' x:Name="textBlock" HorizontalAlignment="Left" Margin="55,26,0,0" TextWrapping="Wrap" Text=" Money Clicker Game" VerticalAlignment="Top" Height="70" Width="266" FontSize="24" FontStretch="Expanded" FontWeight="ExtraBlack"/>
+        <Button x:ConnectionId='4' x:Name="btnNavGamePage1" Content="Start Game" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top" Height="59" Width="360" Background="#FF8C9EF2"                               BorderBrush="#FF3A3232" Grid.Row="1" FontSize="18.667" FontWeight="Bold"/>
+        <Button x:ConnectionId='5' x:Name="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="14,203,0,0" VerticalAlignment="Top" Height="36"                       Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116" FontWeight="Bold" FontSize="16" Opacity="0.85"/>
+        <TextBlock x:ConnectionId='6' x:Name="textBlock1" HorizontalAlignment="Right" Margin="326,0,0,49" TextWrapping="Wrap" Text="V0.20" Width="34" FontSize="12" FontWeight="Bold"/>
+        <Button x:ConnectionId='7' x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="234,203,0,0" VerticalAlignment="Top" Height="36"                       Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116" FontSize="16" FontWeight="Bold" Opacity="0.85"/>
+
     </Grid>
 </Page>
 

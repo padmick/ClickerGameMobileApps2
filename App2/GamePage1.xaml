@@ -7,44 +7,55 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="10,0,-200,0">
+    <Grid Margin="10,0,-247,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="159*"/>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="132*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnPlayer" Content="Work for Week" HorizontalAlignment="Left" Margin="0,153,0,0" VerticalAlignment="Top" Click="btnPlayer_Click" RenderTransformOrigin="-0.627,-0.312" Width="360" FontWeight="Bold" Background="#FF00B4FF" BorderBrush="#FF0A0808"/>
+        <Button x:Name="btnPlayer" Content="Work for Day" HorizontalAlignment="Left" Margin="0,153,0,0" VerticalAlignment="Top" Click="btnPlayer_Click" RenderTransformOrigin="-0.627,-0.312" Width="360" FontWeight="Bold" Background="#FF00B4FF" BorderBrush="#FF0A0808"/>
         <TextBox x:Name="txtScore" HorizontalAlignment="Left" Margin="0,75,0,0" TextWrapping="Wrap" Text="€   0" VerticalAlignment="Top" Width="178" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" FontSize="17.333" FontWeight="Bold"/>
         <Button x:Name="btnWorker" Content="Office Worker" HorizontalAlignment="Left" Margin="0,266,0,0" VerticalAlignment="Top" Click="btnWorker_Click" RenderTransformOrigin="-0.627,-0.312" Width="113" FontWeight="Bold" Background="#FFEA6033" FontSize="14" Height="32"/>
-        <Button x:Name="btnManager" Content="Manager " HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Click="btnManager_Click" RenderTransformOrigin="-0.627,-0.312" Width="113" FontWeight="Bold" Background="#FF20B932" Grid.Row="1"/>
-        <Button x:Name="btnBoss" Content="Boss" HorizontalAlignment="Left" Margin="0,16,0,0" VerticalAlignment="Top" Click="btnBoss_Click" RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFA543C1" Width="113" Grid.Row="2"/>
-        <Button x:Name="btnSupervisor" Content="Supervisor" HorizontalAlignment="Left" Margin="0,296,0,0" VerticalAlignment="Top" Click="btnSupervisor_Click" RenderTransformOrigin="-0.627,-0.312" Width="113" FontWeight="Bold" Background="#FFD8EA25" Grid.RowSpan="2"/>
+        <Button x:Name="btnManager" Content="Manager " HorizontalAlignment="Left" Margin="0,328,0,0" VerticalAlignment="Top" Click="btnManager_Click" RenderTransformOrigin="-0.627,-0.312" Width="113" FontWeight="Bold" Background="#FF20B932"/>
+        <Button x:Name="btnBoss" Content="Boss" HorizontalAlignment="Left" Margin="0,418,0,0" VerticalAlignment="Top" Click="btnBoss_Click" RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFA543C1" Width="113"/>
+        <Button x:Name="btnSupervisor" Content="Supervisor" HorizontalAlignment="Left" Margin="0,296,0,0" VerticalAlignment="Top" Click="btnSupervisor_Click" RenderTransformOrigin="-0.627,-0.312" Width="113" FontWeight="Bold" Background="#FFD8EA25"/>
         <TextBox x:Name="txtScorePerClick" HorizontalAlignment="Left" Margin="0,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="183,78,0,0" TextWrapping="Wrap" Text="Total Capital" VerticalAlignment="Top" Height="32" Width="114" FontSize="17.333" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="90,116,0,0" TextWrapping="Wrap" Text="Money per Click" VerticalAlignment="Top" Height="32" Width="126" FontSize="15.333" FontWeight="Bold"/>
-        <TextBox x:Name="txtCostForWorker" HorizontalAlignment="Left" Margin="132,266,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
-        <TextBox x:Name="txtCostForSupervisor" HorizontalAlignment="Left" Margin="132,298,0,0" TextWrapping="Wrap" Text="150" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.RowSpan="2" />
-        <TextBox x:Name="txtCostForManager" HorizontalAlignment="Left" Margin="132,9,0,0" TextWrapping="Wrap" Text="500" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.Row="1" />
-        <TextBox x:Name="txtCostForBoss" HorizontalAlignment="Left" Margin="132,13,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.Row="2" />
-        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="232,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="80" FontSize="12" FontWeight="Bold">
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="90,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="126" FontSize="15.333" FontWeight="Bold">
+        	<Run Text="Money per "/>
+        	<Run Text="day"/>
+        </TextBlock>
+        <TextBox x:Name="txtCostForWorker" HorizontalAlignment="Left" Margin="132,269,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
+        <TextBox x:Name="txtCostForSupervisor" HorizontalAlignment="Left" Margin="132,301,0,0" TextWrapping="Wrap" Text="500" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
+        <TextBox x:Name="txtCostForManager" HorizontalAlignment="Left" Margin="132,330,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
+        <TextBox x:Name="txtCostForBoss" HorizontalAlignment="Left" Margin="132,418,0,0" TextWrapping="Wrap" Text="12000" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="232,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="80" FontSize="12" FontWeight="Bold">
     		<Run Text="Employee List"/>
     		<LineBreak/>
     		<Run/>
         </TextBlock>
-        <TextBox x:Name="txtNoOfSupervisors" HorizontalAlignment="Left" Margin="228,299,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.RowSpan="2"  />
-        <TextBox x:Name="txtNoOfManagers" HorizontalAlignment="Left" Margin="228,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.Row="1"  />
-        <TextBox x:Name="txtNoOfBosses" HorizontalAlignment="Left" Margin="228,16,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.Row="2"  />
-        <Button x:Name="btnNavHomePage" Content="Home Page" HorizontalAlignment="Left" Margin="0,155,0,0" VerticalAlignment="Top" Height="59" Width="113" Background="#33020EFD" Click="btnNavGamePage1_Click" FontSize="18" BorderBrush="#FF2B2222" Grid.Row="2"/>
-        <TextBox x:Name="txtNoOfWorkers" HorizontalAlignment="Left" Margin="228,266,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
-        <Button x:Name="btnRelocateWorker" Content="Sell&#xD;&#xA;" HorizontalAlignment="Left" Margin="340,266,0,0" VerticalAlignment="Top" Click="btnRelocateWorker_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="32"/>
-        <Button x:Name="btnRelocateSupervisor" Content="Sell&#xA;" HorizontalAlignment="Left" Margin="340,298,0,0" VerticalAlignment="Top" Click="btnRelocateSupervisor_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="33" Grid.RowSpan="2"/>
-        <Button x:Name="btnRelocateManager" Content="Sell&#xA;" HorizontalAlignment="Left" Margin="340,10,0,0" VerticalAlignment="Top" Click="btnRelocateManager_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="32" Grid.Row="1"/>
-        <Button x:Name="btnRelocateBoss" Content="Sell&#xA;" HorizontalAlignment="Left" Margin="340,16,0,0" VerticalAlignment="Top" Click="btnRelocateBoss_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="32" Grid.Row="2"/>
-        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="136,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="80" FontSize="12" FontWeight="Bold" Text="Cost to Hire"/>
-        <Button x:Name="btnSupplier" Content="Supplier" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Click="btnSupplier_Click" RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FF2ECFDA" Width="113" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBox x:Name="txtCostPerSupplier" HorizontalAlignment="Left" Margin="132,39,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.Row="1" Grid.RowSpan="2" />
-        <TextBox x:Name="txtNoOfSuppliers" HorizontalAlignment="Left" Margin="228,42,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" Grid.Row="1" Grid.RowSpan="2"  />
-        <Button x:Name="btnRelocateSuppliers" Content="Sell&#xA;" HorizontalAlignment="Left" Margin="340,42,0,0" VerticalAlignment="Top" Click="btnRelocateSupplies_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="32" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBox x:Name="txtTotalNoOfEmployees" HorizontalAlignment="Left" Margin="228,93,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="132" IsReadOnly="True" Background="Black" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" BorderThickness="3,2,2,2" Grid.Row="2"  />
+        <TextBox x:Name="txtNoOfSupervisors" HorizontalAlignment="Left" Margin="228,302,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21"  />
+        <TextBox x:Name="txtNoOfManagers" HorizontalAlignment="Left" Margin="228,331,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21"  />
+        <TextBox x:Name="txtNoOfBosses" HorizontalAlignment="Left" Margin="228,417,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21"  />
+        <Button x:Name="btnNavHomePage" Content="Home Page" HorizontalAlignment="Left" Margin="0,582,0,-1" VerticalAlignment="Top" Height="59" Width="113" Background="#33020EFD" Click="btnNavGamePage1_Click" FontSize="18" BorderBrush="#FF2B2222"/>
+        <TextBox x:Name="txtNoOfWorkers" HorizontalAlignment="Left" Margin="228,269,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
+        <Button x:Name="btnRelocateWorker" Content="Relocate&#xA;" HorizontalAlignment="Left" Margin="340,266,0,0" VerticalAlignment="Top" Click="btnRelocateWorker_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="35" BorderBrush="#FF150505"/>
+        <Button x:Name="btnRelocateSupervisor" Content="Relocate&#xA;" HorizontalAlignment="Left" Margin="340,296,0,0" VerticalAlignment="Top" Click="btnRelocateSupervisor_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="37" BorderBrush="#FF272020"/>
+        <Button x:Name="btnRelocateManager" Content="Relocate&#xA;" HorizontalAlignment="Left" Margin="340,328,0,0" VerticalAlignment="Top" Click="btnRelocateManager_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="35" BorderBrush="#FF150606"/>
+        <Button x:Name="btnRelocateBoss" Content="Relocate&#xA;" HorizontalAlignment="Left" Margin="340,417,0,0" VerticalAlignment="Top" Click="btnRelocateBoss_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="33" BorderBrush="#FF210E0E"/>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="136,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="80" FontSize="12" FontWeight="Bold" Text="Cost to Hire"/>
+        <Button x:Name="btnSupplier" Content="Supplier" HorizontalAlignment="Left" Margin="0,360,0,0" VerticalAlignment="Top" Click="btnSupplier_Click" RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FF2ECFDA" Width="113"/>
+        <TextBox x:Name="txtCostPerSupplier" HorizontalAlignment="Left" Margin="132,360,0,0" TextWrapping="Wrap" Text="2500" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
+        <TextBox x:Name="txtNoOfSuppliers" HorizontalAlignment="Left" Margin="228,359,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21"  />
+        <Button x:Name="btnRelocateSuppliers" Content="Relocate&#xA;" HorizontalAlignment="Left" Margin="340,359,0,0" VerticalAlignment="Top" Click="btnRelocateSupplies_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="33" BorderBrush="#FF270909"/>
+        <TextBox x:Name="txtTotalNoOfEmployees" HorizontalAlignment="Left" Margin="232,485,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="80" IsReadOnly="True" Background="Black" BorderBrush="#FF230505" Foreground="#FF041125" Height="21" BorderThickness="3,2,2,2"  />
+        <TextBox x:Name="txtTotalNoOfDays" HorizontalAlignment="Left" Margin="370,153,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="459,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="126" FontSize="15.333" FontWeight="Bold">
+        	<Run Text="Total "/>
+        	<Run Text="Days"/>
+        </TextBlock>
+        <Button x:Name="btnManufacturer" Content="Manufacturer" HorizontalAlignment="Left" Margin="0,389,0,0" VerticalAlignment="Top" Click="btnManufacturer_Click" RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFD42C53" Width="113" FontSize="14.333"/>
+        <TextBox x:Name="txtCostPerManufacturer" HorizontalAlignment="Left" Margin="132,389,0,0" TextWrapping="Wrap" Text="7000" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
+        <TextBox x:Name="txtNoOfManufacturers" HorizontalAlignment="Left" Margin="228,388,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21"  />
+        <Button x:Name="btnRelocateManufacturer" Content="Relocate&#xA;" HorizontalAlignment="Left" Margin="340,389,0,0" VerticalAlignment="Top" Click="btnRelocateManufacturer_Click" RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="32" BorderBrush="#FF2B1717"/>
+        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="232,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="128" FontSize="12" FontWeight="Bold" Text="Total Employees"/>
     </Grid>
 </Page>

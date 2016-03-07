@@ -32,35 +32,36 @@ namespace App2
 
         int clickCounter;
         int click = 10; // CHANGE LATER, ONLY ON 5 FOR TESTING PURPOSES
+        int totalNoOfDays;
 
         // WORKERS
         int costPerWorker = 100;
-        int costPerWorkerIncrease = 4;
+        int costPerWorkerIncrease = 8;
         int noOfWorkers;
 
         //SUPERVISORS
         int costPerSupervisor = 500;
-        int costPerSupervisorIncrease = 6;
+        int costPerSupervisorIncrease = 12;
         int noOfSupervisors;
 
         //MANAGERS
         int costPerManager = 1000;
-        int costPerManagerIncrease = 10;
+        int costPerManagerIncrease = 28;
         int noOfManagers;
 
         //SUPPLIERS
         int costPerSupplier = 2500;
-        int costPerSupplierIncrease = 16;
+        int costPerSupplierIncrease = 64;
         int noOfSuppliers;
 
         //MANUFACTURERS
         int costPerManufacturer = 7000;
-        int costPerManufacturerIncrease = 24;
+        int costPerManufacturerIncrease = 166;
         int noOfManufacturers;
 
         //BOSSES
-        int costPerBoss = 11000;
-        int costPerBossIncrease = 34;
+        int costPerBoss = 12000;
+        int costPerBossIncrease = 418;
         int noOfBosses;
 
         //TOTAL EMPLOYEES
@@ -72,6 +73,9 @@ namespace App2
             clickCounter = clickCounter + click;
             txtScore.Text = "€   " + clickCounter.ToString();
             txtScorePerClick.Text = click.ToString();
+
+            totalNoOfDays = totalNoOfDays + 1;
+            txtTotalNoOfDays.Text = totalNoOfDays.ToString();
         }
 
 
@@ -191,7 +195,7 @@ namespace App2
             else
             {
                 clickCounter = clickCounter - costPerBoss;
-                click = click + 150;
+                click = click + 250;
                 txtScore.Text = "€   " + clickCounter.ToString();
                 txtScorePerClick.Text = click.ToString();
 
@@ -205,7 +209,36 @@ namespace App2
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
             }
             return;
+
         }
+
+        private async void btnManufacturer_Click(object sender, RoutedEventArgs e)
+        {
+            if (clickCounter < costPerManufacturer)
+            {
+                var dialog = new MessageDialog("You do not have enough money to buy a Boss!" + "THE BUDGET, REMEMBER THE BUDGET!!!");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                clickCounter = clickCounter - costPerManufacturer;
+                click = click + 250;
+                txtScore.Text = "€   " + clickCounter.ToString();
+                txtScorePerClick.Text = click.ToString();
+
+                costPerManufacturer = costPerManufacturer + costPerBossIncrease++;
+                txtCostPerManufacturer.Text = costPerManufacturer.ToString();
+
+                noOfManufacturers = noOfManufacturers + 1;
+                txtNoOfManufacturers.Text = noOfManufacturers.ToString();
+
+                totalEmployees = totalEmployees + 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+            }
+            return;
+
+        }
+
 
         // navigation button to go back to the home page
         private async void btnNavGamePage1_Click(object sender, RoutedEventArgs e)
@@ -230,10 +263,15 @@ namespace App2
             else
             {
                 noOfWorkers = noOfWorkers - 1;
-                click = click - 1;
+                click = click - 3;
                 clickCounter = clickCounter + (costPerWorker / 2); // so you can't keep buying and selling 
                 txtNoOfWorkers.Text = noOfWorkers.ToString(); // updates no of workers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
+                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+
+                totalEmployees = totalEmployees - 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+
             }
             return;
         }
@@ -248,11 +286,15 @@ namespace App2
             }
             else
             {
-                noOfSupervisors = noOfSupervisors - costPerSupervisorIncrease;
-                click = click - 3;
+                noOfSupervisors = noOfSupervisors - 1;
+                click = click - 12;
                 clickCounter = clickCounter + (costPerSupervisor / 2); // so you can't keep buying and selling 
                 txtNoOfSupervisors.Text = noOfSupervisors.ToString(); // updates no of supervisors being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
+                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+
+                totalEmployees = totalEmployees - 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
             }
             return;
         }
@@ -267,11 +309,15 @@ namespace App2
             }
             else
             {
-                noOfManagers = noOfManagers - costPerManagerIncrease;
-                click = click - 5;
+                noOfManagers = noOfManagers - 1;
+                click = click - 32;
                 clickCounter = clickCounter + (costPerManager / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfManagers.Text = noOfManagers.ToString(); // updates no of managers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
+                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+
+                totalEmployees = totalEmployees - 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
             }
             return;
         }
@@ -287,10 +333,14 @@ namespace App2
             else
             {
                 noOfSuppliers = noOfSuppliers - 1;
-                click = click - 8;
+                click = click - 80;
                 clickCounter = clickCounter + (costPerSupplier / 2); // so you can't keep buying and selling 
                 txtNoOfSuppliers.Text = noOfSuppliers.ToString(); // updates no of suppliers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
+                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+
+                totalEmployees = totalEmployees - 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
             }
             return;
 
@@ -306,16 +356,22 @@ namespace App2
             }
             else
             {
-                noOfBosses = noOfBosses - costPerBossIncrease;
-                click = click - 12;
+                noOfBosses = noOfBosses - 1;
+                click = click - 250;
                 clickCounter = clickCounter + (costPerBoss / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfBosses.Text = noOfBosses.ToString(); // updates no of managers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
+
+                totalEmployees = totalEmployees - 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+
             }
             return;
         }
 
-       
-        
+        private void btnRelocateManufacturer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
