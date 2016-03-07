@@ -199,3 +199,8 @@ C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\Li
 C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\ListOfEmployees.g.cs
 C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\ListOfEmployees.xaml
 C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\ListOfEmployees.xbf
+C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\GamePage1.g.i.cs
+C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\GamePage1.g.cs
+C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\GamePage1.xaml
+C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\GamePage1.xbf
+C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\GamePage1.xbf
