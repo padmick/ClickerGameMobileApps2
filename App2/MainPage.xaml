@@ -17,7 +17,7 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="55,26,0,0" TextWrapping="Wrap" Text=" Money Clicker Game" VerticalAlignment="Top" Height="70" Width="266" FontSize="24" FontStretch="Expanded" FontWeight="ExtraBlack"/>
         <Button x:Name="btnNavGamePage1" Content="Start Game" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top" Height="59" Width="360" Background="#FF8C9EF2" Click="btnNavGamePage1_Click" BorderBrush="#FF3A3232" Grid.Row="1" FontSize="18.667" FontWeight="Bold"/>
         <Button x:Name="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="14,203,0,0" VerticalAlignment="Top" Height="36" Click="btnHelp_Click" Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116" FontWeight="Bold" FontSize="16" Opacity="0.85"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="326,0,0,49" TextWrapping="Wrap" Text="V0.20" Width="34" FontSize="12" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="326,0,0,49" TextWrapping="Wrap" Text="V0.50" Width="34" FontSize="12" FontWeight="Bold"/>
         <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="234,203,0,0" VerticalAlignment="Top" Height="36" Click="btnExit_Click" Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116" FontSize="16" FontWeight="Bold" Opacity="0.85"/>
 
     </Grid>
