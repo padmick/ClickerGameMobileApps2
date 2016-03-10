@@ -37,8 +37,7 @@ namespace App2
             if (clickCounter < 500 )
             {
                 btnSupervisor.IsEnabled = false;
-                btnSupervisor.Opacity = 0;
-                
+                btnSupervisor.Opacity = 0;   
             }
 
             if (clickCounter < 1500)
@@ -119,6 +118,8 @@ namespace App2
 
         //PERKS
         int costEcoBoom = 200000;
+        int costExtraTime = 250000;
+        int costMoraleBoost = 300000;
 
         public async void btnPlayer_Click(object sender, RoutedEventArgs e)
         {
@@ -200,7 +201,7 @@ namespace App2
                 click = click + WorkerScoreIncrease++;
                 
                 txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = click.ToString();
+                txtScorePerClick.Text = "€  " + click.ToString();
 
                 costPerWorker = costPerWorker + costPerWorkerIncrease++;
                 txtCostForWorker.Text = costPerWorker.ToString();
@@ -229,7 +230,7 @@ namespace App2
                 clickCounter = clickCounter - costPerSupervisor;
                 click = click + SupervisorScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = click.ToString();
+                txtScorePerClick.Text = "€  " + click.ToString();
 
                 costPerSupervisor = costPerSupervisor + costPerSupervisorIncrease++;
                 txtCostForSupervisor.Text = costPerSupervisor.ToString();
@@ -260,7 +261,7 @@ namespace App2
                 clickCounter = clickCounter - costPerManager;
                 click = click + ManagerScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = click.ToString();
+                txtScorePerClick.Text = "€  " + click.ToString();
 
                 costPerManager = costPerManager + costPerManagerIncrease++;
                 txtCostForManager.Text = costPerManager.ToString();
@@ -290,7 +291,7 @@ namespace App2
                 clickCounter = clickCounter - costPerSupplier;
                 click = click + SupplierScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = click.ToString();
+                txtScorePerClick.Text = "€  " + click.ToString();
 
                 costPerSupplier = costPerSupplier + costPerSupplierIncrease++;
                 txtCostPerSupplier.Text = costPerSupplier.ToString();
@@ -321,7 +322,7 @@ namespace App2
                 clickCounter = clickCounter - costPerManufacturer;
                 click = click + ManufacturerScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = click.ToString();
+                txtScorePerClick.Text = "€  " + click.ToString();
 
                 costPerManufacturer = costPerManufacturer + costPerManufacturerIncrease++;
                 txtCostPerManufacturer.Text = costPerManufacturer.ToString();
@@ -350,7 +351,7 @@ namespace App2
                 clickCounter = clickCounter - costPerBoss;
                 click = click + BossScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = click.ToString();
+                txtScorePerClick.Text = "€  " + click.ToString();
 
                 costPerBoss = costPerBoss + costPerBossIncrease++;
                 txtCostForBoss.Text = costPerBoss.ToString();
@@ -377,7 +378,7 @@ namespace App2
 
         }
         ////////////////////////////////////////////////////////////////////////
-        // RELOCATION OF WORKERS///////////////////////////////////////////////////////////////////////////////////////////
+        // LAY OFF WORKERS///////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         public async void btnRelocateWorker_Click(object sender, RoutedEventArgs e)
         {
@@ -394,7 +395,7 @@ namespace App2
                 clickCounter = clickCounter + (costPerWorker / 2); // so you can't keep buying and selling 
                 txtNoOfWorkers.Text = noOfWorkers.ToString(); // updates no of workers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -418,7 +419,7 @@ namespace App2
                 clickCounter = clickCounter + (costPerSupervisor / 2); // so you can't keep buying and selling 
                 txtNoOfSupervisors.Text = noOfSupervisors.ToString(); // updates no of supervisors being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -441,7 +442,7 @@ namespace App2
                 clickCounter = clickCounter + (costPerManager / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfManagers.Text = noOfManagers.ToString(); // updates no of managers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -464,7 +465,7 @@ namespace App2
                 clickCounter = clickCounter + (costPerSupplier / 2); // so you can't keep buying and selling 
                 txtNoOfSuppliers.Text = noOfSuppliers.ToString(); // updates no of suppliers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = click.ToString(); // updates the scores per click counter 
+                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -488,6 +489,7 @@ namespace App2
                 clickCounter = clickCounter + (costPerBoss / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfBosses.Text = noOfBosses.ToString(); // updates no of managers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -511,13 +513,16 @@ namespace App2
                 clickCounter = clickCounter + (costPerManufacturer / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfManufacturers.Text = noOfManufacturers.ToString(); // updates no of manufacturers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
             }
             return;
         }
-
+        ////////////////////////////////////////////////////////////////////////
+        //PERKS///////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////
         private async void btnPerkEcoBoom_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter > costEcoBoom)
@@ -529,7 +534,7 @@ namespace App2
                 costPerManufacturer = costPerManufacturer / 2;
                 costPerBoss = costPerBoss / 2;
 
-                clickCounter = clickCounter - 200000;
+                clickCounter = clickCounter - costEcoBoom;
 
                 txtCostForWorker.Text = costPerWorker.ToString();
                 txtCostForSupervisor.Text = costPerSupervisor.ToString();
@@ -550,16 +555,44 @@ namespace App2
             }
         }
 
-        private void btnPerkExtraTime_Click(object sender, RoutedEventArgs e)
+        private async void btnPerkExtraTime_Click(object sender, RoutedEventArgs e)
         {
-            if(clickCounter >= 250000)
+            if (clickCounter >= costExtraTime)
             {
-                clickCounter = clickCounter - 250000;
+                clickCounter = clickCounter - costExtraTime;
                 totalNoOfDays = totalNoOfDays - 30;
                 txtTotalNoOfDays.Text = totalNoOfDays.ToString();
 
                 btnPerkExtraTime.IsEnabled = false;
                 btnPerkExtraTime.Opacity = 30;
+
+                txtScore.Text = "€   " + clickCounter.ToString();
+
+            }
+            else
+            {
+                var dialog = new MessageDialog("You don't have enough for this perk");
+                await dialog.ShowAsync();
+            }
+        }
+
+        private async void btnPerkMoraleBoost_Click(object sender, RoutedEventArgs e)
+        {
+            if (clickCounter >= costMoraleBoost)
+            {
+                clickCounter = clickCounter - costMoraleBoost;
+                click = click * 2;
+                txtScorePerClick.Text = "€  " + click.ToString();
+
+                btnPerkMoraleBoost.IsEnabled = false;
+                btnPerkMoraleBoost.Opacity = 30;
+
+                txtScore.Text = "€   " + clickCounter.ToString();
+            }
+            else
+            {
+                var dialog = new MessageDialog("You don't have enough for this perk");
+                await dialog.ShowAsync();
             }
         }
     }
