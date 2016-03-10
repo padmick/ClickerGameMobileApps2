@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>73CFF83DD994F501B153A655AF13E67DA4CD6269D7348D97FFBEAC16FB169907</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>777AD07FE0F6D0A7AADF4F9862B59E9D8E7753EB9A22958F67D31E4CCA5BD410</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627_1.0.0.0_x86__xkj04xcm6e7n4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627_xkj04xcm6e7n4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627</RegisteredPackageID>
@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-03-10T00:52:10.654</Modified>
+      <Modified>2016-03-10T19:28:20.938</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\App2.exe">
       <PackagePath>entrypoint\App2.exe</PackagePath>
-      <Modified>2016-03-10T00:52:10.345</Modified>
+      <Modified>2016-03-10T19:28:19.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -506,7 +506,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\App2.xr.xml">
       <PackagePath>App2.xr.xml</PackagePath>
-      <Modified>2016-03-07T19:40:49.685</Modified>
+      <Modified>2016-03-10T19:08:33.098</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -514,11 +514,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-03-09T23:57:49.937</Modified>
+      <Modified>2016-03-10T19:28:20.561</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\Core\App2.exe">
       <PackagePath>App2.exe</PackagePath>
-      <Modified>2016-03-10T00:52:10.653</Modified>
+      <Modified>2016-03-10T19:28:20.933</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

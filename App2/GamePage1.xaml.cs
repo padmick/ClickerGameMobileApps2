@@ -27,37 +27,39 @@ namespace App2
         {
             this.InitializeComponent();
 
+            // if total capital is less than 100
             if (clickCounter < 100)
             { 
-                btnWorker.Opacity = 0;
-                btnWorker.IsEnabled = false;
+                btnWorker.IsEnabled = false; // button functionality is turned off
             }
 
+            // if total capital is less than 100
             if (clickCounter < 500 )
             {
-                btnSupervisor.Opacity = 0;
                 btnSupervisor.IsEnabled = false;
+                btnSupervisor.Opacity = 0;
+                
             }
 
-            if (clickCounter < 1000)
+            if (clickCounter < 1500)
             {
                btnManager.IsEnabled = false;
                btnManager.Opacity = 0;
             }
 
-            if (clickCounter < 2500)
+            if (clickCounter < 5000)
             {
                 btnSupplier.IsEnabled = false;
                 btnSupplier.Opacity = 0;
             }
 
-            if (clickCounter < 7000)
+            if (clickCounter < 12000)
             {
                 btnManufacturer.IsEnabled = false;
                 btnManufacturer.Opacity = 0;
             }
 
-            if (clickCounter < 12000)
+            if (clickCounter < 30000)
             {
                 btnBoss.IsEnabled = false;
                 btnBoss.Opacity = 0;
@@ -67,88 +69,91 @@ namespace App2
         // VARIABLES
   
         int clickCounter;
-        int click = 10; // CHANGE LATER, ONLY ON 10 FOR TESTING PURPOSES
+        int click = 100; // CHANGE LATER, ONLY ON 100 FOR TESTING PURPOSES
         int totalNoOfDays;
 
         // WORKERS
         int costPerWorker = 100;
         int costPerWorkerIncrease = 8;
         int noOfWorkers;
-        int AmountGainPerWorker = 3;
-        int WorkerScoreIncrease = 3;
+        int AmountGainPerWorker = 5;
+        int WorkerScoreIncrease = 5;
 
         //SUPERVISORS
         int costPerSupervisor = 500;
         int costPerSupervisorIncrease = 16;
         int noOfSupervisors;
-        int AmountGainPerSupervisor = 12;
-        int SupervisorScoreIncrease = 12; 
+        int AmountGainPerSupervisor = 20;
+        int SupervisorScoreIncrease = 20; 
 
         //MANAGERS
-        int costPerManager = 1000;
-        int costPerManagerIncrease = 34;
+        int costPerManager = 1500;
+        int costPerManagerIncrease = 34 ;
         int noOfManagers;
-        int AmountGainPerManager = 32;
-        int ManagerScoreIncrease = 32;
+        int AmountGainPerManager = 75;
+        int ManagerScoreIncrease = 75;
 
         //SUPPLIERS
-        int costPerSupplier = 2500;
+        int costPerSupplier = 5000;
         int costPerSupplierIncrease = 74;
         int noOfSuppliers;
-        int AmountGainPerSupplier = 80;
-        int SupplierScoreIncrease = 80;
+        int AmountGainPerSupplier = 320;
+        int SupplierScoreIncrease = 320;
 
         //MANUFACTURERS
-        int costPerManufacturer = 7000;
+        int costPerManufacturer = 12000;
         int costPerManufacturerIncrease = 192;
         int noOfManufacturers;
-        int AmountGainPerManufacturer = 250;
-        int ManufacturerScoreIncrease = 250;
+        int AmountGainPerManufacturer = 1140;
+        int ManufacturerScoreIncrease = 1140;
 
         //BOSSES
-        int costPerBoss = 12000;
+        int costPerBoss = 30000;
         int costPerBossIncrease = 526;
         int noOfBosses;
-        int AmountGainPerBoss = 800;
-        int BossScoreIncrease = 800;
+        int AmountGainPerBoss = 2600;
+        int BossScoreIncrease = 2600;
 
         //TOTAL EMPLOYEES
         int totalEmployees;
 
-        private async void btnPlayer_Click(object sender, RoutedEventArgs e)
+        //PERKS
+        int costEcoBoom = 200000;
+
+        public async void btnPlayer_Click(object sender, RoutedEventArgs e)
         {
             // makes WORKER button visible and clickable when Capital is 100
             if(clickCounter >= 90)
             {
-                btnWorker.Opacity = 100;
                 btnWorker.IsEnabled = true;
                 txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString(); // display how much user makes if they buy the WORKER
+                btnSupervisor.Opacity = 30;
             }
             // makes SUPERVISOR button visible and clickable when Capital is 500
-            if (clickCounter >= (500 -click))
+            if (clickCounter >= (490 -click))
             {
-                btnSupervisor.Opacity = 100;
+                btnManager.Opacity = 30;
                 btnSupervisor.IsEnabled = true;
                 txtAmountGainPerSupervisor.Text = AmountGainPerSupervisor.ToString(); // display how much user makes if they buy the SUPERVISOR
             }
 
             // makes MANAGER button visible and clickable when Capital is 500
-            if (clickCounter > (1000 - click))
+            if (clickCounter >= (1000 - click))
             {
-                btnManager.Opacity = 100;
+                btnSupplier.Opacity = 30;
                 btnManager.IsEnabled = true;
                 txtAmountGainPerManager.Text = AmountGainPerManager.ToString();
             }
             
-            if (clickCounter > (2500 - click))
+            if (clickCounter >= (2500 - click))
             {
-                btnSupplier.Opacity = 100;
+                btnManufacturer.Opacity = 30;
                 btnSupplier.IsEnabled = true;
                 txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString();
             }
             if (clickCounter > (7000 - click))
             {
-                btnManufacturer.Opacity = 100;
+                btnBoss.Opacity = 30;
                 btnManufacturer.IsEnabled = true;
                 txtAmountGainPerManufacturer.Text = AmountGainPerManufacturer.ToString();
             }
@@ -157,23 +162,23 @@ namespace App2
             {
                 btnBoss.Opacity = 100;
                 btnBoss.IsEnabled = true;
-                txtAmountGainPerBoss.Text = txtAmountGainPerBoss.ToString();
+                txtAmountGainPerBoss.Text = AmountGainPerBoss.ToString();
             }
 
             // each time the button is clicked, the counter goes up by value of clickCounter
             clickCounter = clickCounter + click;
             txtScore.Text = "€   " + clickCounter.ToString();
-            txtScorePerClick.Text = click.ToString();
+            txtScorePerClick.Text = "€  " + click.ToString();
 
             totalNoOfDays = totalNoOfDays + 1;
             txtTotalNoOfDays.Text = totalNoOfDays.ToString();
 
-            if (totalNoOfDays == 365 & clickCounter > 100000  )
+            if (totalNoOfDays == 365 & clickCounter > 100000 )
             {
-                var dialog = new MessageDialog("You made" + clickCounter + " in a year, well done!!!");
+                var dialog = new MessageDialog("You made €" + clickCounter + " in a year, well done!!!");
                 await dialog.ShowAsync();
             }
-            else if(totalNoOfDays == 300 && clickCounter < 50000)
+            else if(totalNoOfDays == 365 && clickCounter < 100000)
             {
                 var dialog = new MessageDialog("You ended the term with only €" + clickCounter + ", too bad. You needed €" + (50000 - clickCounter + click) + " more. Please restart and try again next year!");
                 await dialog.ShowAsync();
@@ -181,7 +186,7 @@ namespace App2
             }
         }
 
-        private async void btnWorker_Click(object sender, RoutedEventArgs e)
+        public async void btnWorker_Click(object sender, RoutedEventArgs e)
         { 
             if (clickCounter < costPerWorker)
             {
@@ -210,7 +215,7 @@ namespace App2
             }
             return;
         }
-        private async void btnSupervisor_Click(object sender, RoutedEventArgs e)
+        public async void btnSupervisor_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter < costPerSupervisor)
             {
@@ -241,7 +246,7 @@ namespace App2
             return;
         }
 
-        private async void btnManager_Click(object sender, RoutedEventArgs e)
+        public async void btnManager_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter < costPerManager)
             {
@@ -271,7 +276,7 @@ namespace App2
             return;
         }
 
-        private async void btnSupplier_Click(object sender, RoutedEventArgs e)
+        public async void btnSupplier_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter < costPerSupplier)
             {
@@ -302,7 +307,7 @@ namespace App2
             return;
         }
 
-        private async void btnManufacturer_Click(object sender, RoutedEventArgs e)
+        public async void btnManufacturer_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter < costPerManufacturer)
             {
@@ -331,7 +336,7 @@ namespace App2
             }
             return;
         }
-        private async void btnBoss_Click(object sender, RoutedEventArgs e)
+        public async void btnBoss_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter < costPerBoss)
             {
@@ -363,7 +368,7 @@ namespace App2
         }
 
         // navigation button to go back to the home page
-        private async void btnNavGamePage1_Click(object sender, RoutedEventArgs e)
+        public async void btnNavGamePage1_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new MessageDialog("Progress won't be saved upon exiting application!");
             await dialog.ShowAsync();
@@ -374,7 +379,7 @@ namespace App2
         ////////////////////////////////////////////////////////////////////////
         // RELOCATION OF WORKERS///////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
-        private async void btnRelocateWorker_Click(object sender, RoutedEventArgs e)
+        public async void btnRelocateWorker_Click(object sender, RoutedEventArgs e)
         {
             if (noOfWorkers < 1) // if the player has none
             {
@@ -398,7 +403,7 @@ namespace App2
             return;
         }
 
-        private async void btnRelocateSupervisor_Click(object sender, RoutedEventArgs e)
+        public async void btnRelocateSupervisor_Click(object sender, RoutedEventArgs e)
         {
             if (noOfSupervisors < 1) // if the player has none
             {
@@ -421,7 +426,7 @@ namespace App2
             return;
         }
 
-        private async void btnRelocateManager_Click(object sender, RoutedEventArgs e)
+        public async void btnRelocateManager_Click(object sender, RoutedEventArgs e)
         {
             if (noOfManagers < 1) // if the player has none
             {
@@ -444,7 +449,7 @@ namespace App2
             return;
         }
 
-        private async void btnRelocateSupplies_Click(object sender, RoutedEventArgs e)
+        public async void btnRelocateSupplies_Click(object sender, RoutedEventArgs e)
         {
             if (noOfSuppliers < 1) // if the player has none
             {
@@ -468,7 +473,7 @@ namespace App2
 
         }
 
-        private async void btnRelocateBoss_Click(object sender, RoutedEventArgs e)
+        public async void btnRelocateBoss_Click(object sender, RoutedEventArgs e)
         {
             if (noOfBosses < 1) // if the player has none
             {
@@ -491,7 +496,7 @@ namespace App2
             return;
         }
 
-        private async void btnRelocateManufacturer_Click(object sender, RoutedEventArgs e)
+        public async void btnRelocateManufacturer_Click(object sender, RoutedEventArgs e)
         {
             if (noOfManufacturers < 1) // if the player has none
             {
@@ -511,6 +516,51 @@ namespace App2
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
             }
             return;
+        }
+
+        private async void btnPerkEcoBoom_Click(object sender, RoutedEventArgs e)
+        {
+            if (clickCounter > costEcoBoom)
+            {
+                costPerWorker = costPerWorker / 2;
+                costPerSupervisor = costPerSupervisor / 2;
+                costPerManager = costPerManager / 2;
+                costPerSupplier = costPerSupplier / 2;
+                costPerManufacturer = costPerManufacturer / 2;
+                costPerBoss = costPerBoss / 2;
+
+                clickCounter = clickCounter - 200000;
+
+                txtCostForWorker.Text = costPerWorker.ToString();
+                txtCostForSupervisor.Text = costPerSupervisor.ToString();
+                txtCostForManager.Text = costPerManager.ToString();
+                txtCostPerSupplier.Text = costPerSupplier.ToString();
+                txtCostPerManufacturer.Text = costPerManufacturer.ToString();
+                txtCostForBoss.Text = costPerBoss.ToString();
+                txtScore.Text = "€   " + clickCounter.ToString();
+
+                btnPerkEcoBoom.IsEnabled = false;
+                btnSupplier.Opacity = 30;
+
+            }
+            else
+            {
+                var dialog = new MessageDialog("You don't have enough for this perk");
+                await dialog.ShowAsync();
+            }
+        }
+
+        private void btnPerkExtraTime_Click(object sender, RoutedEventArgs e)
+        {
+            if(clickCounter >= 250000)
+            {
+                clickCounter = clickCounter - 250000;
+                totalNoOfDays = totalNoOfDays - 30;
+                txtTotalNoOfDays.Text = totalNoOfDays.ToString();
+
+                btnPerkExtraTime.IsEnabled = false;
+                btnPerkExtraTime.Opacity = 30;
+            }
         }
     }
 }

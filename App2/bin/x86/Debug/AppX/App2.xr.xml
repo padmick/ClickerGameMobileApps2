@@ -9,11 +9,17 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Margin" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="UseLayoutRounding" />
+      <RootProperty Name="RenderTransform" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
+      <RootProperty Name="Rotation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -30,6 +36,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Height" />
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Opacity" />
       <RootEvent Name="Click" />
     </RootType>
@@ -62,6 +69,7 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="FontStretch" />
+      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
@@ -77,6 +85,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="App2.MainPage" />
   </Roots.RootTypes>
