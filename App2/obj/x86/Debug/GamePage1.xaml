@@ -19,9 +19,10 @@
         <Button x:ConnectionId='6' x:Name="btnSupervisor" Content="Supervisor" HorizontalAlignment="Left" Margin="0,291,0,0" VerticalAlignment="Top"                             RenderTransformOrigin="-0.627,-0.312" Width="113" FontWeight="Bold" Background="#FFD8EA25"/>
         <TextBox x:ConnectionId='7' x:Name="txtScorePerClick" HorizontalAlignment="Left" Margin="0,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
         <TextBlock x:ConnectionId='8' x:Name="textBlock1" HorizontalAlignment="Left" Margin="183,78,0,0" TextWrapping="Wrap" Text="Total Capital" VerticalAlignment="Top" Height="32" Width="114" FontSize="17.333" FontWeight="Bold"/>
-        <TextBlock x:ConnectionId='9' x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="90,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="126" FontSize="15.333" FontWeight="Bold">
+        <TextBlock x:ConnectionId='9' x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="90,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="207" FontSize="15.333" FontWeight="Bold">
         	<Run Text="Money per "/>
         	<Run Text="day"/>
+        	<Run Text="(MPD)"/>
         </TextBlock>
         <TextBox x:ConnectionId='10' x:Name="txtCostForWorker" HorizontalAlignment="Left" Margin="132,261,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
         <TextBox x:ConnectionId='11' x:Name="txtCostForSupervisor" HorizontalAlignment="Left" Margin="132,291,0,0" TextWrapping="Wrap" Text="500" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" />
@@ -58,6 +59,12 @@
         <Button x:ConnectionId='35' x:Name="btnRelocateManufacturer" Content="Lay Off" HorizontalAlignment="Left" Margin="424,380,0,0" VerticalAlignment="Top"                                       RenderTransformOrigin="-0.627,-0.312" Width="84" FontWeight="Bold" Background="#FFEA6033" Height="32" BorderBrush="#FF2B1717"/>
         <TextBlock x:ConnectionId='36' x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="232,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="128" FontSize="12" FontWeight="Bold" Text="Total Employees"/>
         <TextBox x:ConnectionId='37' x:Name="txtAmountGainPerWorker" HorizontalAlignment="Left" Margin="317,261,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
+        <TextBlock x:ConnectionId='38' x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Margin="317,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="80" FontSize="12" FontWeight="Bold" Text="MPD Increase"/>
+        <TextBox x:ConnectionId='39' x:Name="txtAmountGainPerSupervisor" HorizontalAlignment="Left" Margin="317,292,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
+        <TextBox x:ConnectionId='40' x:Name="txtAmountGainPerManager" HorizontalAlignment="Left" Margin="317,319,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
+        <TextBox x:ConnectionId='41' x:Name="txtAmountGainPerSupplier" HorizontalAlignment="Left" Margin="317,350,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
+        <TextBox x:ConnectionId='42' x:Name="txtAmountGainPerManufacturer" HorizontalAlignment="Left" Margin="317,380,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
+        <TextBox x:ConnectionId='43' x:Name="txtAmountGainPerBoss" HorizontalAlignment="Left" Margin="317,409,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="21" RenderTransformOrigin="0.567,-1.062"  />
     </Grid>
 </Page>
 

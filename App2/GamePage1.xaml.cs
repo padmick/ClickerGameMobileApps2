@@ -41,22 +41,26 @@ namespace App2
 
             if (clickCounter < 1000)
             {
-                //btnManager.IsEnabled = false;
+               btnManager.IsEnabled = false;
+               btnManager.Opacity = 0;
             }
 
             if (clickCounter < 2500)
             {
-              //  btnSupplier.IsEnabled = false;
+                btnSupplier.IsEnabled = false;
+                btnSupplier.Opacity = 0;
             }
 
             if (clickCounter < 7000)
             {
-                //btnManufacturer.IsEnabled = false;
+                btnManufacturer.IsEnabled = false;
+                btnManufacturer.Opacity = 0;
             }
 
             if (clickCounter < 12000)
             {
-              //  btnBoss.IsEnabled = false;
+                btnBoss.IsEnabled = false;
+                btnBoss.Opacity = 0;
             }
 
         }
@@ -77,49 +81,83 @@ namespace App2
         int costPerSupervisor = 500;
         int costPerSupervisorIncrease = 16;
         int noOfSupervisors;
+        int AmountGainPerSupervisor = 12;
+        int SupervisorScoreIncrease = 12; 
 
         //MANAGERS
         int costPerManager = 1000;
         int costPerManagerIncrease = 34;
         int noOfManagers;
+        int AmountGainPerManager = 32;
+        int ManagerScoreIncrease = 32;
 
         //SUPPLIERS
         int costPerSupplier = 2500;
         int costPerSupplierIncrease = 74;
         int noOfSuppliers;
+        int AmountGainPerSupplier = 80;
+        int SupplierScoreIncrease = 80;
 
         //MANUFACTURERS
         int costPerManufacturer = 7000;
         int costPerManufacturerIncrease = 192;
         int noOfManufacturers;
+        int AmountGainPerManufacturer = 250;
+        int ManufacturerScoreIncrease = 250;
 
         //BOSSES
         int costPerBoss = 12000;
         int costPerBossIncrease = 526;
         int noOfBosses;
+        int AmountGainPerBoss = 800;
+        int BossScoreIncrease = 800;
 
         //TOTAL EMPLOYEES
         int totalEmployees;
 
-
-
         private async void btnPlayer_Click(object sender, RoutedEventArgs e)
         {
-            if (clickCounter > 80)
+            // makes WORKER button visible and clickable when Capital is 100
+            if(clickCounter >= 90)
             {
                 btnWorker.Opacity = 100;
                 btnWorker.IsEnabled = true;
+                txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString(); // display how much user makes if they buy the WORKER
             }
-            if(clickCounter == 90)
-            {
-                txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString();
-            }
-
-
-            if (clickCounter >= (500 - click))
+            // makes SUPERVISOR button visible and clickable when Capital is 500
+            if (clickCounter >= (500 -click))
             {
                 btnSupervisor.Opacity = 100;
                 btnSupervisor.IsEnabled = true;
+                txtAmountGainPerSupervisor.Text = AmountGainPerSupervisor.ToString(); // display how much user makes if they buy the SUPERVISOR
+            }
+
+            // makes MANAGER button visible and clickable when Capital is 500
+            if (clickCounter > (1000 - click))
+            {
+                btnManager.Opacity = 100;
+                btnManager.IsEnabled = true;
+                txtAmountGainPerManager.Text = AmountGainPerManager.ToString();
+            }
+            
+            if (clickCounter > (2500 - click))
+            {
+                btnSupplier.Opacity = 100;
+                btnSupplier.IsEnabled = true;
+                txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString();
+            }
+            if (clickCounter > (7000 - click))
+            {
+                btnManufacturer.Opacity = 100;
+                btnManufacturer.IsEnabled = true;
+                txtAmountGainPerManufacturer.Text = AmountGainPerManufacturer.ToString();
+            }
+
+            if (clickCounter >= (12000 - click))
+            {
+                btnBoss.Opacity = 100;
+                btnBoss.IsEnabled = true;
+                txtAmountGainPerBoss.Text = txtAmountGainPerBoss.ToString();
             }
 
             // each time the button is clicked, the counter goes up by value of clickCounter
@@ -130,23 +168,21 @@ namespace App2
             totalNoOfDays = totalNoOfDays + 1;
             txtTotalNoOfDays.Text = totalNoOfDays.ToString();
 
-            if (totalNoOfDays == 365 && clickCounter == 50000  )
+            if (totalNoOfDays == 365 & clickCounter > 100000  )
             {
                 var dialog = new MessageDialog("You made" + clickCounter + " in a year, well done!!!");
                 await dialog.ShowAsync();
             }
-            else if(totalNoOfDays == 100 && clickCounter < 50000)
+            else if(totalNoOfDays == 300 && clickCounter < 50000)
             {
-                var dialog = new MessageDialog("You ended the term with only €" + clickCounter + " in a year, too bad. You needed €" + (50000 - clickCounter) + " more. Please restart and try again next year!");
+                var dialog = new MessageDialog("You ended the term with only €" + clickCounter + ", too bad. You needed €" + (50000 - clickCounter + click) + " more. Please restart and try again next year!");
                 await dialog.ShowAsync();
                 this.Frame.Navigate(typeof(MainPage), null);
             }
         }
 
-
         private async void btnWorker_Click(object sender, RoutedEventArgs e)
-        {
-            
+        { 
             if (clickCounter < costPerWorker)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a worker!" + " We're on a budget!");
@@ -171,20 +207,11 @@ namespace App2
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
                 txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString();
-
             }
-
             return;
         }
-
         private async void btnSupervisor_Click(object sender, RoutedEventArgs e)
         {
-            //if (clickCounter == 50)
-           // {
-               // btnSupervisor.Opacity = 100;
-               // btnSupervisor.IsEnabled = true;
-           // }
-
             if (clickCounter < costPerSupervisor)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a Supervisor!" + " You can't just leave it to him to look at the budget");
@@ -192,8 +219,10 @@ namespace App2
             }
             else
             {
+                AmountGainPerSupervisor++;
+
                 clickCounter = clickCounter - costPerSupervisor;
-                click = click + 12;
+                click = click + SupervisorScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
                 txtScorePerClick.Text = click.ToString();
 
@@ -205,6 +234,9 @@ namespace App2
 
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+
+                txtAmountGainPerSupervisor.Text = AmountGainPerSupervisor.ToString();
+
             }
             return;
         }
@@ -218,8 +250,10 @@ namespace App2
             }
             else
             {
+                AmountGainPerManager++;
+
                 clickCounter = clickCounter - costPerManager;
-                click = click + 32;
+                click = click + ManagerScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
                 txtScorePerClick.Text = click.ToString();
 
@@ -231,6 +265,8 @@ namespace App2
 
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+
+                txtAmountGainPerManager.Text = AmountGainPerManager.ToString();
             }
             return;
         }
@@ -244,8 +280,10 @@ namespace App2
             }
             else
             {
+                AmountGainPerSupplier++;
+
                 clickCounter = clickCounter - costPerSupplier;
-                click = click + 80;
+                click = click + SupplierScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
                 txtScorePerClick.Text = click.ToString();
 
@@ -257,36 +295,11 @@ namespace App2
 
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+
+                txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString();
+
             }
             return;
-        }
-
-
-        private async void btnBoss_Click(object sender, RoutedEventArgs e)
-        {
-            if (clickCounter < costPerBoss)
-            {
-                var dialog = new MessageDialog("You do not have enough money to buy a Boss!" + "THE BUDGET, REMEMBER THE BUDGET!!!");
-                await dialog.ShowAsync();
-            }
-            else
-            {
-                clickCounter = clickCounter - costPerBoss;
-                click = click + 250;
-                txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = click.ToString();
-
-                costPerBoss = costPerBoss + costPerBossIncrease++;
-                txtCostForBoss.Text = costPerBoss.ToString();
-
-                noOfBosses = noOfBosses + 1;
-                txtNoOfBosses.Text = noOfBosses.ToString();
-
-                totalEmployees = totalEmployees + 1;
-                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
-            }
-            return;
-
         }
 
         private async void btnManufacturer_Click(object sender, RoutedEventArgs e)
@@ -298,8 +311,10 @@ namespace App2
             }
             else
             {
+                AmountGainPerManufacturer++;
+
                 clickCounter = clickCounter - costPerManufacturer;
-                click = click + 250;
+                click = click + ManufacturerScoreIncrease++;
                 txtScore.Text = "€   " + clickCounter.ToString();
                 txtScorePerClick.Text = click.ToString();
 
@@ -311,11 +326,41 @@ namespace App2
 
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+
+                txtAmountGainPerManufacturer.Text = AmountGainPerManufacturer.ToString();
             }
             return;
-
         }
+        private async void btnBoss_Click(object sender, RoutedEventArgs e)
+        {
+            if (clickCounter < costPerBoss)
+            {
+                var dialog = new MessageDialog("You do not have enough money to buy a Boss!" + "THE BUDGET, REMEMBER THE BUDGET!!!");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                AmountGainPerBoss++;
 
+                clickCounter = clickCounter - costPerBoss;
+                click = click + BossScoreIncrease++;
+                txtScore.Text = "€   " + clickCounter.ToString();
+                txtScorePerClick.Text = click.ToString();
+
+                costPerBoss = costPerBoss + costPerBossIncrease++;
+                txtCostForBoss.Text = costPerBoss.ToString();
+
+                noOfBosses = noOfBosses + 1;
+                txtNoOfBosses.Text = noOfBosses.ToString();
+
+                totalEmployees = totalEmployees + 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+
+                txtAmountGainPerBoss.Text = AmountGainPerBoss.ToString();
+
+            }
+            return;
+        }
 
         // navigation button to go back to the home page
         private async void btnNavGamePage1_Click(object sender, RoutedEventArgs e)
@@ -428,13 +473,13 @@ namespace App2
             if (noOfBosses < 1) // if the player has none
             {
                 // then display the message on the screen that they have none
-                var dialog = new MessageDialog("You don't have any Managers to relocate");
+                var dialog = new MessageDialog("You don't have any Bosses to relocate");
                 await dialog.ShowAsync();
             }
             else
             {
                 noOfBosses = noOfBosses - 1;
-                click = click - 250;
+                click = click - costPerBoss;
                 clickCounter = clickCounter + (costPerBoss / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfBosses.Text = noOfBosses.ToString(); // updates no of managers being displayed after changes made
                 txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
@@ -446,9 +491,26 @@ namespace App2
             return;
         }
 
-        private void btnRelocateManufacturer_Click(object sender, RoutedEventArgs e)
+        private async void btnRelocateManufacturer_Click(object sender, RoutedEventArgs e)
         {
+            if (noOfManufacturers < 1) // if the player has none
+            {
+                // then display the message on the screen that they have none
+                var dialog = new MessageDialog("You don't have any Manufacturers to relocate");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                noOfManufacturers = noOfManufacturers - 1;
+                click = click - costPerManufacturer;
+                clickCounter = clickCounter + (costPerManufacturer / 2); // so you can't keep buying and selling to keep making money
+                txtNoOfManufacturers.Text = noOfManufacturers.ToString(); // updates no of manufacturers being displayed after changes made
+                txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
 
+                totalEmployees = totalEmployees - 1;
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+            }
+            return;
         }
     }
 }
