@@ -14,11 +14,12 @@
         </Grid.RowDefinitions>
         <Image x:Name="iButton" Source="Assets/Images/iButton.jpg" Margin="10,161,0,0" Grid.Row="1" Opacity="0.8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
         <Image x:Name="exitButton" Source="Assets/Images/exitButton.png" Margin="219,161,0,0" Grid.Row="1" Opacity="0.8" Height="120" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,26,0,0" TextWrapping="Wrap" Text="  Workforce Clicker" VerticalAlignment="Top" Height="70" Width="360" FontSize="24" FontStretch="Expanded" FontWeight="ExtraBlack" FontFamily="OCR A Std"/>
-        <Button x:Name="btnNavGamePage1" Content="Start Game" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top" Height="59" Width="360" Background="#FF8C9EF2" Click="btnNavGamePage1_Click" BorderBrush="#FF3A3232" Grid.Row="1" FontSize="18.667" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock" x:Uid="UidGameTitle" HorizontalAlignment="Left" Margin="0,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="360" FontSize="24" FontStretch="Expanded" FontWeight="ExtraBlack" FontFamily="OCR A Std"/>
+        <Button x:Name="btnNavGamePage1" Content="Start Game" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="146" Width="360" Background="#FF8C9EF2" Click="btnNavGamePage1_Click" BorderBrush="#FF3A3232" Grid.Row="1" FontSize="18.667" FontWeight="Bold"/>
         <Button x:Name="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="14,203,0,0" VerticalAlignment="Top" Height="36" Click="btnHelp_Click" Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116" FontWeight="Bold" FontSize="16" Opacity="0.85"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" Margin="326,0,0,49" TextWrapping="Wrap" Text="V0.65" Width="34" FontSize="12" FontWeight="Bold"/>
         <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="219,203,0,0" VerticalAlignment="Top" Height="36" Click="btnExit_Click" Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116" FontSize="16" FontWeight="Bold" Opacity="0.85"/>
+        <StackPanel x:Name="SPanel" HorizontalAlignment="Left" Height="100" Margin="130,367,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Tapped="SPanel_Tapped"/>
 
     </Grid>
 </Page>

@@ -345,6 +345,9 @@
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\exitButton.png">
       <PackagePath>Assets\Images\exitButton.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\neongreenrect.png">
+      <PackagePath>Assets\Images\neongreenrect.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>

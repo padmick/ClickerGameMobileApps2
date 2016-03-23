@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.RootTypes>
-    <RootType FullName="Windows.UI.Xaml.Application">
-      <RootProperty Name="RequestedTheme" />
-    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
     </RootType>
@@ -25,7 +23,6 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
@@ -34,6 +31,7 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Content" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Height" />
       <RootProperty Name="BorderThickness" />
@@ -71,12 +69,12 @@
       <RootProperty Name="FontStretch" />
       <RootProperty Name="FontFamily" />
     </RootType>
+    <RootType FullName="App2.GamePage1" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
-    <RootType FullName="App2.GamePage1" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="App2.ListOfEmployees" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
@@ -86,6 +84,14 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="App2.MainPage" />
   </Roots.RootTypes>

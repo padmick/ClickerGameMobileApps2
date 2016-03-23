@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -13,6 +17,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,111 +32,141 @@ namespace App2
         {
             this.InitializeComponent();
 
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            if(rootFrame == null)
+            {
+                rootFrame = new Frame();
+            }
+
             // if total capital is less than 100
-            if (clickCounter < 100)
-            { 
+            if (clickCounter < costPerWorker)
+            {
                 btnWorker.IsEnabled = false; // button functionality is turned off
             }
 
             // if total capital is less than 100
-            if (clickCounter < 500 )
+            if (clickCounter < costPerSupervisor)
             {
                 btnSupervisor.IsEnabled = false;
-                btnSupervisor.Opacity = 0;   
+                btnSupervisor.Opacity = 0;
             }
 
-            if (clickCounter < 1500)
+            if (clickCounter < costPerManager)
             {
-               btnManager.IsEnabled = false;
-               btnManager.Opacity = 0;
+                btnManager.IsEnabled = false;
+                btnManager.Opacity = 0;
             }
 
-            if (clickCounter < 5000)
+            if (clickCounter < costPerSupplier)
             {
                 btnSupplier.IsEnabled = false;
                 btnSupplier.Opacity = 0;
             }
 
-            if (clickCounter < 12000)
+            if (clickCounter < costPerManufacturer)
             {
                 btnManufacturer.IsEnabled = false;
                 btnManufacturer.Opacity = 0;
             }
 
-            if (clickCounter < 30000)
+            if (clickCounter < costPerBoss)
             {
                 btnBoss.IsEnabled = false;
                 btnBoss.Opacity = 0;
             }
 
         }
+
         // VARIABLES
-  
+
         int clickCounter;
-        int click = 100; // CHANGE LATER, ONLY ON 100 FOR TESTING PURPOSES
+        int click = 200; // CHANGE LATER, ONLY ON 100 FOR TESTING PURPOSES
         int totalNoOfDays;
 
         // WORKERS
-        int costPerWorker = 100;
-        int costPerWorkerIncrease = 8;
+        int costPerWorker = 2000;
+        int costPerWorkerIncrease = 50;
         int noOfWorkers;
-        int AmountGainPerWorker = 5;
-        int WorkerScoreIncrease = 5;
+        int AmountGainPerWorker = 30;
+        int WorkerScoreIncrease = 30;
 
         //SUPERVISORS
-        int costPerSupervisor = 500;
-        int costPerSupervisorIncrease = 16;
+        int costPerSupervisor = 15000;
+        int costPerSupervisorIncrease = 250;
         int noOfSupervisors;
-        int AmountGainPerSupervisor = 20;
-        int SupervisorScoreIncrease = 20; 
+        int AmountGainPerSupervisor = 200;
+        int SupervisorScoreIncrease = 200;
 
         //MANAGERS
-        int costPerManager = 1500;
-        int costPerManagerIncrease = 34 ;
+        int costPerManager = 35000;
+        int costPerManagerIncrease = 3000;
         int noOfManagers;
-        int AmountGainPerManager = 75;
-        int ManagerScoreIncrease = 75;
+        int AmountGainPerManager = 800;
+        int ManagerScoreIncrease = 800;
 
         //SUPPLIERS
-        int costPerSupplier = 5000;
-        int costPerSupplierIncrease = 74;
+        int costPerSupplier = 125000;
+        int costPerSupplierIncrease = 10000;
         int noOfSuppliers;
-        int AmountGainPerSupplier = 320;
-        int SupplierScoreIncrease = 320;
+        int AmountGainPerSupplier = 2500;
+        int SupplierScoreIncrease = 2500;
 
         //MANUFACTURERS
-        int costPerManufacturer = 12000;
-        int costPerManufacturerIncrease = 192;
+        int costPerManufacturer = 240000;
+        int costPerManufacturerIncrease = 18000;
         int noOfManufacturers;
-        int AmountGainPerManufacturer = 1140;
-        int ManufacturerScoreIncrease = 1140;
+        int AmountGainPerManufacturer = 8000;
+        int ManufacturerScoreIncrease = 8000;
 
         //BOSSES
-        int costPerBoss = 30000;
-        int costPerBossIncrease = 526;
+        int costPerBoss = 500000;
+        int costPerBossIncrease = 50000;
         int noOfBosses;
-        int AmountGainPerBoss = 2600;
-        int BossScoreIncrease = 2600;
-
+        int AmountGainPerBoss = 15000;
+        int BossScoreIncrease = 15000;
+        
         //TOTAL EMPLOYEES
         int totalEmployees;
 
         //PERKS
-        int costEcoBoom = 200000;
-        int costExtraTime = 250000;
-        int costMoraleBoost = 300000;
+        int costEcoBoom = 400000;
+        int costExtraTime = 150000;
+        int costMoraleBoost = 250000;
+
+        //FILE
+        // private const string saveFileName = "saveFile.xml";
+        savedValues saves = new savedValues(); // saves
+
+
+        public class savedValues
+        {
+            public int savedClickCounter { get; set; }
+        }
 
         public async void btnPlayer_Click(object sender, RoutedEventArgs e)
         {
+            if (totalNoOfDays == totalNoOfDays %365)
+            {
+                Random rnd = new Random();
+                string[] phrases = { "Did you know that this is a game for a college project?",
+                    "If you stop getting thirsty, you need to drink more water as the body is dehydrated, its thirst mechanism shuts off.",
+                    "People in the U.S. spend at least 1896 hours per year at work", "No piece of normal-size paper can be folded in half more than seven times.",
+                "A typist’s fingers travel 12.6 miles during an average workday.",
+                "The average office worker spends 50 minutes a day looking for lost files and other items.",
+                };
+                txtMessageBoard.Text = (phrases[rnd.Next(0, phrases.Length)]);
+            }
+
             // makes WORKER button visible and clickable when Capital is 100
-            if(clickCounter >= 90)
+            if (clickCounter >= (costPerWorker - click))
             {
                 btnWorker.IsEnabled = true;
                 txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString(); // display how much user makes if they buy the WORKER
                 btnSupervisor.Opacity = 30;
             }
             // makes SUPERVISOR button visible and clickable when Capital is 500
-            if (clickCounter >= (490 -click))
+            if (clickCounter >= (costPerSupervisor - click))
             {
                 btnManager.Opacity = 30;
                 btnSupervisor.IsEnabled = true;
@@ -139,27 +174,27 @@ namespace App2
             }
 
             // makes MANAGER button visible and clickable when Capital is 500
-            if (clickCounter >= (1000 - click))
+            if (clickCounter >= (costPerManager - click))
             {
                 btnSupplier.Opacity = 30;
                 btnManager.IsEnabled = true;
                 txtAmountGainPerManager.Text = AmountGainPerManager.ToString();
             }
-            
-            if (clickCounter >= (2500 - click))
+
+            if (clickCounter >= (costPerSupplier - click))
             {
                 btnManufacturer.Opacity = 30;
                 btnSupplier.IsEnabled = true;
                 txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString();
             }
-            if (clickCounter > (7000 - click))
+            if (clickCounter > (costPerManufacturer - click))
             {
-                btnBoss.Opacity = 30;
+                btnManufacturer.Opacity = 30;
                 btnManufacturer.IsEnabled = true;
                 txtAmountGainPerManufacturer.Text = AmountGainPerManufacturer.ToString();
             }
 
-            if (clickCounter >= (12000 - click))
+            if (clickCounter >= (costPerBoss - click))
             {
                 btnBoss.Opacity = 100;
                 btnBoss.IsEnabled = true;
@@ -168,30 +203,32 @@ namespace App2
 
             // each time the button is clicked, the counter goes up by value of clickCounter
             clickCounter = clickCounter + click;
-            txtScore.Text = "€   " + clickCounter.ToString();
-            txtScorePerClick.Text = "€  " + click.ToString();
+            txtScore.Text = "€   " + clickCounter.ToString("#,#0");
+            txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
             totalNoOfDays = totalNoOfDays + 1;
-            txtTotalNoOfDays.Text = totalNoOfDays.ToString();
+            txtTotalNoOfDays.Text = totalNoOfDays.ToString("#,#0");
 
-            if (totalNoOfDays == 365 & clickCounter > 100000 )
+            
+
+            if (totalNoOfDays == 365 & clickCounter > 100000)
             {
                 var dialog = new MessageDialog("You made €" + clickCounter + " in a year, well done!!!");
                 await dialog.ShowAsync();
             }
-            else if(totalNoOfDays == 365 && clickCounter < 100000)
+            else if (totalNoOfDays == 365 && clickCounter < 100000)
             {
-                var dialog = new MessageDialog("You ended the term with only €" + clickCounter + ", too bad. You needed €" + (50000 - clickCounter + click) + " more. Please restart and try again next year!");
+                var dialog = new MessageDialog("You ended the term with only €" + clickCounter + ", too bad. You needed €" + (100000 - clickCounter + click) + " more. Please restart and try again next year!");
                 await dialog.ShowAsync();
-                this.Frame.Navigate(typeof(MainPage), null);
+                this.Frame.Navigate(typeof(MainPage), 5);
             }
         }
 
         public async void btnWorker_Click(object sender, RoutedEventArgs e)
-        { 
+        {
             if (clickCounter < costPerWorker)
             {
-                var dialog = new MessageDialog("You do not have enough money to buy a worker!" + " We're on a budget!");
+                var dialog = new MessageDialog("You do not have enough money to buy a worker!");
                 await dialog.ShowAsync();
             }
             else
@@ -199,12 +236,12 @@ namespace App2
                 AmountGainPerWorker++;
                 clickCounter = clickCounter - costPerWorker;
                 click = click + WorkerScoreIncrease++;
-                
-                txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = "€  " + click.ToString();
+
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
                 costPerWorker = costPerWorker + costPerWorkerIncrease++;
-                txtCostForWorker.Text = costPerWorker.ToString();
+                txtCostForWorker.Text = costPerWorker.ToString("#,#0");
 
                 noOfWorkers = noOfWorkers + 1;
                 txtNoOfWorkers.Text = noOfWorkers.ToString();
@@ -212,7 +249,7 @@ namespace App2
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
-                txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString();
+                txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString("#,#0");
             }
             return;
         }
@@ -220,7 +257,7 @@ namespace App2
         {
             if (clickCounter < costPerSupervisor)
             {
-                var dialog = new MessageDialog("You do not have enough money to buy a Supervisor!" + " You can't just leave it to him to look at the budget");
+                var dialog = new MessageDialog("You do not have enough money to buy a Supervisor!");
                 await dialog.ShowAsync();
             }
             else
@@ -229,11 +266,11 @@ namespace App2
 
                 clickCounter = clickCounter - costPerSupervisor;
                 click = click + SupervisorScoreIncrease++;
-                txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = "€  " + click.ToString();
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
                 costPerSupervisor = costPerSupervisor + costPerSupervisorIncrease++;
-                txtCostForSupervisor.Text = costPerSupervisor.ToString();
+                txtCostForSupervisor.Text = costPerSupervisor.ToString("#,#0");
 
                 noOfSupervisors = noOfSupervisors + 1;
                 txtNoOfSupervisors.Text = noOfSupervisors.ToString();
@@ -241,7 +278,7 @@ namespace App2
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
-                txtAmountGainPerSupervisor.Text = AmountGainPerSupervisor.ToString();
+                txtAmountGainPerSupervisor.Text = AmountGainPerSupervisor.ToString("#,#0");
 
             }
             return;
@@ -251,7 +288,7 @@ namespace App2
         {
             if (clickCounter < costPerManager)
             {
-                var dialog = new MessageDialog("You do not have enough money to buy a Manager!" + " We're still on a budget, you do know that right?");
+                var dialog = new MessageDialog("You do not have enough money to buy a Manager!");
                 await dialog.ShowAsync();
             }
             else
@@ -260,11 +297,11 @@ namespace App2
 
                 clickCounter = clickCounter - costPerManager;
                 click = click + ManagerScoreIncrease++;
-                txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = "€  " + click.ToString();
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
                 costPerManager = costPerManager + costPerManagerIncrease++;
-                txtCostForManager.Text = costPerManager.ToString();
+                txtCostForManager.Text = costPerManager.ToString("#,#0");
 
                 noOfManagers = noOfManagers + 1;
                 txtNoOfManagers.Text = noOfManagers.ToString();
@@ -272,7 +309,7 @@ namespace App2
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
-                txtAmountGainPerManager.Text = AmountGainPerManager.ToString();
+                txtAmountGainPerManager.Text = AmountGainPerManager.ToString("#,#0");
             }
             return;
         }
@@ -281,7 +318,7 @@ namespace App2
         {
             if (clickCounter < costPerSupplier)
             {
-                var dialog = new MessageDialog("You do not have enough money to buy a Supplier!" + "You kind of need to supply some money to afford a supplier!");
+                var dialog = new MessageDialog("You do not have enough money to buy a Supplier!");
                 await dialog.ShowAsync();
             }
             else
@@ -290,11 +327,11 @@ namespace App2
 
                 clickCounter = clickCounter - costPerSupplier;
                 click = click + SupplierScoreIncrease++;
-                txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = "€  " + click.ToString();
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
                 costPerSupplier = costPerSupplier + costPerSupplierIncrease++;
-                txtCostPerSupplier.Text = costPerSupplier.ToString();
+               // txtC.Text = costPerSupplier.ToString("#,#0");
 
                 noOfSuppliers = noOfSuppliers + 1;
                 txtNoOfSuppliers.Text = noOfSuppliers.ToString();
@@ -302,7 +339,7 @@ namespace App2
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
-                txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString();
+                txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString("#,#0");
 
             }
             return;
@@ -312,7 +349,7 @@ namespace App2
         {
             if (clickCounter < costPerManufacturer)
             {
-                var dialog = new MessageDialog("You do not have enough money to buy a Boss!" + "THE BUDGET, REMEMBER THE BUDGET!!!");
+                var dialog = new MessageDialog("You do not have enough money to buy a Boss!");
                 await dialog.ShowAsync();
             }
             else
@@ -321,11 +358,11 @@ namespace App2
 
                 clickCounter = clickCounter - costPerManufacturer;
                 click = click + ManufacturerScoreIncrease++;
-                txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = "€  " + click.ToString();
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
+                txtScorePerClick.Text = "€  " + click.ToString("#,#00");
 
                 costPerManufacturer = costPerManufacturer + costPerManufacturerIncrease++;
-                txtCostPerManufacturer.Text = costPerManufacturer.ToString();
+                txtCostPerManufacturer.Text = costPerManufacturer.ToString("#,#0");
 
                 noOfManufacturers = noOfManufacturers + 1;
                 txtNoOfManufacturers.Text = noOfManufacturers.ToString();
@@ -333,7 +370,7 @@ namespace App2
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
-                txtAmountGainPerManufacturer.Text = AmountGainPerManufacturer.ToString();
+                txtAmountGainPerManufacturer.Text = AmountGainPerManufacturer.ToString("#,#0");
             }
             return;
         }
@@ -350,11 +387,11 @@ namespace App2
 
                 clickCounter = clickCounter - costPerBoss;
                 click = click + BossScoreIncrease++;
-                txtScore.Text = "€   " + clickCounter.ToString();
-                txtScorePerClick.Text = "€  " + click.ToString();
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
                 costPerBoss = costPerBoss + costPerBossIncrease++;
-                txtCostForBoss.Text = costPerBoss.ToString();
+                txtCostForBoss.Text = costPerBoss.ToString("#,#0");
 
                 noOfBosses = noOfBosses + 1;
                 txtNoOfBosses.Text = noOfBosses.ToString();
@@ -362,7 +399,7 @@ namespace App2
                 totalEmployees = totalEmployees + 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
-                txtAmountGainPerBoss.Text = AmountGainPerBoss.ToString();
+                txtAmountGainPerBoss.Text = AmountGainPerBoss.ToString("#,#0");
 
             }
             return;
@@ -595,5 +632,84 @@ namespace App2
                 await dialog.ShowAsync();
             }
         }
+
+        private async void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            saves.savedClickCounter = clickCounter;
+            await SaveAsync();
+            //this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private async Task SaveAsync()
+        {
+            StorageFile userdetailsfile = await ApplicationData.Current.LocalFolder.CreateFileAsync("UserDetails",
+            CreationCollisionOption.ReplaceExisting);
+            IRandomAccessStream raStream = await userdetailsfile.OpenAsync(FileAccessMode.ReadWrite);
+            using (IOutputStream outStream = raStream.GetOutputStreamAt(0))
+            {
+                // Serialize the Session State.
+                DataContractSerializer serializer = new DataContractSerializer(typeof(savedValues));
+                serializer.WriteObject(outStream.AsStreamForWrite(), saves);
+                await outStream.FlushAsync();
+            }
+            var dialog = new MessageDialog("Game is saved!");
+            await dialog.ShowAsync();
+        }
+
+        private async void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            StorageFile file = await ApplicationData.Current.LocalFolder.GetFileAsync("UserDetails");
+            if (file == null) return;
+            IRandomAccessStream inStream = await file.OpenReadAsync();
+            // Deserialize the Session State.
+            DataContractSerializer serializer = new DataContractSerializer(typeof(savedValues));
+            var StatsDetails = (savedValues)serializer.ReadObject(inStream.AsStreamForRead());
+            inStream.Dispose();
+            var dialog = new MessageDialog("Game is loaded!");
+            await dialog.ShowAsync();
+        }
+
+        private List<Worker> buildObjectGraph()
+        {
+            var myWorkers = new List<Worker>();
+
+            myWorkers.Add(new Worker() {savedClickCounter = clickCounter});
+            return myWorkers;
+        }
+
+        /*
+private async Task writeXMLAsync()
+{
+   var myWorkers = clickCounter; //buildObjectGraph();
+
+   var serializer = new System.Runtime.Serialization.DataContractSerializer(typeof(List<Worker>));
+   using (var stream = await ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(
+                     saveFileName,
+                     CreationCollisionOption.ReplaceExisting))
+   {
+       serializer.WriteObject(stream, myWorkers);
+       var dialog = new MessageDialog("Save was successful");
+       await dialog.ShowAsync();
+   }
+}
+/*
+private async Task readXMLAsync()
+{
+   string content = string.Empty;
+
+   var myStream = await ApplicationData.Current.LocalFolder.OpenStreamForReadAsync(saveFileName);
+   using (StreamReader reader = new StreamReader(myStream))
+   {
+       content = await reader.ReadToEndAsync();
+   }
+   var dialog = new MessageDialog(content);
+   await dialog.ShowAsync();
+
+
+
+}
+*/
+
     }
 }
+
