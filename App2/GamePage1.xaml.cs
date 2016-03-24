@@ -31,6 +31,7 @@ namespace App2
         public GamePage1()
         {
             this.InitializeComponent();
+            DollarStoryBoard.Begin();
 
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -211,12 +212,12 @@ namespace App2
 
             
 
-            if (totalNoOfDays == 365 & clickCounter > 100000)
+            if (totalNoOfDays == 365 & clickCounter > 1000000)
             {
                 var dialog = new MessageDialog("You made €" + clickCounter + " in a year, well done!!!");
                 await dialog.ShowAsync();
             }
-            else if (totalNoOfDays == 365 && clickCounter < 100000)
+            else if (totalNoOfDays == 365 && clickCounter < 1000000)
             {
                 var dialog = new MessageDialog("You ended the term with only €" + clickCounter + ", too bad. You needed €" + (100000 - clickCounter + click) + " more. Please restart and try again next year!");
                 await dialog.ShowAsync();
@@ -460,6 +461,7 @@ namespace App2
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+            
             }
             return;
         }

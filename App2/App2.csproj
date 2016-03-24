@@ -119,9 +119,13 @@
     <None Include="App2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\20euroimage.png" />
+    <Content Include="Assets\Images\50dollarimage.jpg" />
+    <Content Include="Assets\Images\50euroImage.jpg" />
     <Content Include="Assets\Images\exitButton.png" />
     <Content Include="Assets\Images\iButton.jpg" />
     <Content Include="Assets\Images\neongreenrect.png" />
+    <Content Include="Assets\Images\dollarImage.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
