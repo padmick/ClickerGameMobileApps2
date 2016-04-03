@@ -24,7 +24,7 @@
 
         <Button x:Name="btnExit" x:Uid="UidExit" HorizontalAlignment="Left" Margin="219,203,0,0" VerticalAlignment="Top" Height="36" Click="btnExit_Click" Background="#FFCDDC7B" BorderBrush="#FF171212" Grid.Row="1" Width="116" FontSize="16" FontWeight="Bold" Opacity="0.85"/>
         <StackPanel x:Name="SPanel" HorizontalAlignment="Left" Height="100" Margin="130,367,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Tapped="SPanel_Tapped"/>
-        <Button x:Name="btnNavGamePage2" x:Uid="UidNavN" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="62" Width="360" Background="#FF8C9EF2" Click="btnNavGamePage1_Click" BorderBrush="#FF3A3232" FontSize="18.667" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Button x:Name="btnNavGamePage2" x:Uid="UidNavNormal" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Height="62" Width="360" Background="#FF8C9EF2" Click="btnNavGamePage1_Click" BorderBrush="#FF3A3232" FontSize="18.667" FontWeight="Bold" Grid.RowSpan="2"/>
         <Button x:Name="btnNavGamePage3" x:Uid="UidNavHard" HorizontalAlignment="Left" Margin="0,96,0,0" VerticalAlignment="Top" Height="62" Width="360" Background="#FF8C9EF2" Click="btnNavGamePage1_Click" BorderBrush="#FF3A3232" Grid.Row="1" FontSize="18.667" FontWeight="Bold"/>
 
     </Grid>
