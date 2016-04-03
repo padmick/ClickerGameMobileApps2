@@ -16,7 +16,11 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+
+
+
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -40,45 +44,46 @@ namespace App2
                 rootFrame = new Frame();
             }
 
-            // if total capital is less than 100
+            // if total capital is less than cost of Worker
             if (clickCounter < costPerWorker)
             {
                 btnWorker.IsEnabled = false; // button functionality is turned off
             }
 
-            // if total capital is less than 100
+            // if total capital is less than Cost of Supervisor
             if (clickCounter < costPerSupervisor)
             {
                 btnSupervisor.IsEnabled = false;
                 btnSupervisor.Opacity = 0;
             }
 
+            // if total capital is less than Cost of Manager
             if (clickCounter < costPerManager)
             {
                 btnManager.IsEnabled = false;
                 btnManager.Opacity = 0;
             }
-
+            // if total capital is less than Cost of Supplier
             if (clickCounter < costPerSupplier)
             {
                 btnSupplier.IsEnabled = false;
                 btnSupplier.Opacity = 0;
             }
 
+            // if total capital is less than Cost of Manufacturer
             if (clickCounter < costPerManufacturer)
             {
                 btnManufacturer.IsEnabled = false;
                 btnManufacturer.Opacity = 0;
             }
 
+            // if total capital is less than Cost of Boss
             if (clickCounter < costPerBoss)
             {
                 btnBoss.IsEnabled = false;
                 btnBoss.Opacity = 0;
             }
-
         }
-
         // VARIABLES
 
         int clickCounter;
@@ -140,14 +145,16 @@ namespace App2
         savedValues saves = new savedValues(); // saves
 
 
+        // Saving values to file - doesn't work
         public class savedValues
         {
             public int savedClickCounter { get; set; }
         }
 
+        // 'Work for a Day' Button - Allows the user to earn money
         public async void btnPlayer_Click(object sender, RoutedEventArgs e)
         {
-            if (totalNoOfDays == totalNoOfDays %365)
+            if (totalNoOfDays == totalNoOfDays %365) // if total number of days is a value within 365
             {
                 Random rnd = new Random();
                 string[] phrases = { "Did you know that this is a game for a college project?",
@@ -156,17 +163,18 @@ namespace App2
                 "A typist’s fingers travel 12.6 miles during an average workday.",
                 "The average office worker spends 50 minutes a day looking for lost files and other items.",
                 };
-                txtMessageBoard.Text = (phrases[rnd.Next(0, phrases.Length)]);
+                // randowly selects a phrase from the above selection and displays it
+                txtMessageBoard.Text = (phrases[rnd.Next(0, phrases.Length)]); 
             }
 
-            // makes WORKER button visible and clickable when Capital is 100
+            // makes WORKER button visible and clickable when Capital is more than costPerWorker
             if (clickCounter >= (costPerWorker - click))
             {
-                btnWorker.IsEnabled = true;
+                btnWorker.IsEnabled = true; // allows button to be clicked(same for all)
                 txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString(); // display how much user makes if they buy the WORKER
-                btnSupervisor.Opacity = 30;
+                btnSupervisor.Opacity = 30; // makes next button visible(same for all)
             }
-            // makes SUPERVISOR button visible and clickable when Capital is 500
+            // makes SUPERVISOR button visible and clickable when Capital is more than CostPerSupervisor
             if (clickCounter >= (costPerSupervisor - click))
             {
                 btnManager.Opacity = 30;
@@ -174,59 +182,67 @@ namespace App2
                 txtAmountGainPerSupervisor.Text = AmountGainPerSupervisor.ToString(); // display how much user makes if they buy the SUPERVISOR
             }
 
-            // makes MANAGER button visible and clickable when Capital is 500
+            // makes MANAGER button visible and clickable when Capital is more than costPerManager
             if (clickCounter >= (costPerManager - click))
             {
                 btnSupplier.Opacity = 30;
                 btnManager.IsEnabled = true;
                 txtAmountGainPerManager.Text = AmountGainPerManager.ToString();
             }
-
+            // makes SUPPLIER button visible and clickable when Capital is more than costPerSupplier
             if (clickCounter >= (costPerSupplier - click))
             {
                 btnManufacturer.Opacity = 30;
                 btnSupplier.IsEnabled = true;
                 txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString();
             }
+            // makes MANUFACTURER button visible and clickable when Capital is more than costPerManufacturer
             if (clickCounter > (costPerManufacturer - click))
             {
-                btnManufacturer.Opacity = 30;
+                btnBoss.Opacity = 30;
                 btnManufacturer.IsEnabled = true;
                 txtAmountGainPerManufacturer.Text = AmountGainPerManufacturer.ToString();
             }
 
+            // makes BOSS button visible and clickable when Capital is more than costPerBoss
             if (clickCounter >= (costPerBoss - click))
             {
                 btnBoss.Opacity = 100;
                 btnBoss.IsEnabled = true;
                 txtAmountGainPerBoss.Text = AmountGainPerBoss.ToString();
             }
-
+            
             // each time the button is clicked, the counter goes up by value of clickCounter
             clickCounter = clickCounter + click;
-            txtScore.Text = "€   " + clickCounter.ToString("#,#0");
-            txtScorePerClick.Text = "€  " + click.ToString("#,#0");
+            txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // displays Total with commas for easier viewing
+            txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // displays Total Money to be earned daily also with commas for easy viewing
 
-            totalNoOfDays = totalNoOfDays + 1;
-            txtTotalNoOfDays.Text = totalNoOfDays.ToString("#,#0");
+            totalNoOfDays = totalNoOfDays + 1; // days goes up by one
+            txtTotalNoOfDays.Text = totalNoOfDays.ToString("#,#0"); //displays number of days passed(commas possible if game continued after year is over
 
-            
-
+            //////////////////////////////////////////////////////////////////
+            // WINNING AND LOSING THE GAME////////////////////////////////////
+            //////////////////////////////////////////////////////////////////
+            // if money is above 1,000,000 at the end of the year
             if (totalNoOfDays == 365 & clickCounter > 1000000)
             {
                 var dialog = new MessageDialog("You made €" + clickCounter + " in a year, well done!!!");
                 await dialog.ShowAsync();
+                var dialog2 = new MessageDialog("You can now continue if you would like, or try playing on a harder difficulty!(implemented in later version...)");
+                await dialog2.ShowAsync();
             }
+            // if money is under 1,000,000 at the end of the year
             else if (totalNoOfDays == 365 && clickCounter < 1000000)
             {
-                var dialog = new MessageDialog("You ended the term with only €" + clickCounter + ", too bad. You needed €" + (100000 - clickCounter + click) + " more. Please restart and try again next year!");
+                var dialog = new MessageDialog("You ended the term with only €" + clickCounter + ", too bad. You needed €" + (1000000 - clickCounter) + " more. Please restart and try again next year!");
                 await dialog.ShowAsync();
-                this.Frame.Navigate(typeof(MainPage), 5);
+                this.Frame.Navigate(typeof(MainPage), 5); // brings the player back to the Home Page
             }
         }
 
         public async void btnWorker_Click(object sender, RoutedEventArgs e)
         {
+            // If money is less than the cost of a Worker
             if (clickCounter < costPerWorker)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a worker!");
@@ -234,28 +250,30 @@ namespace App2
             }
             else
             {
-                AmountGainPerWorker++;
-                clickCounter = clickCounter - costPerWorker;
-                click = click + WorkerScoreIncrease++;
+                // If money is more than the cost of a Worker(same for the other employee types)
+                clickCounter = clickCounter - costPerWorker; // takes away cost of Worker from Total money
+                click = click + WorkerScoreIncrease++; // increases how much is earned per day which goes up by one on the next hiring
 
-                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
-                txtScorePerClick.Text = "€  " + click.ToString("#,#0");
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // updates the total money
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // updates the amount earned per day
 
-                costPerWorker = costPerWorker + costPerWorkerIncrease++;
-                txtCostForWorker.Text = costPerWorker.ToString("#,#0");
+                costPerWorker = costPerWorker + costPerWorkerIncrease++; // cost of hiring a worker goes up in increments
+                txtCostForWorker.Text = costPerWorker.ToString("#,#0"); // updates the textbox to show this
 
-                noOfWorkers = noOfWorkers + 1;
-                txtNoOfWorkers.Text = noOfWorkers.ToString();
+                noOfWorkers = noOfWorkers + 1; // number of workers goes up by one
+                txtNoOfWorkers.Text = noOfWorkers.ToString(); // textbox updates with the new information
 
-                totalEmployees = totalEmployees + 1;
-                txtTotalNoOfEmployees.Text = totalEmployees.ToString();
+                totalEmployees = totalEmployees + 1; // total employees goes up by one
+                txtTotalNoOfEmployees.Text = totalEmployees.ToString(); // textbox updates with the new information
 
-                txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString("#,#0");
+                AmountGainPerWorker++; // amount gained for each one hired goes up by one
+                txtAmountGainPerWorker.Text = AmountGainPerWorker.ToString("#,#0"); // updates textbox with the new information
             }
             return;
         }
         public async void btnSupervisor_Click(object sender, RoutedEventArgs e)
         {
+            // If money is less than the cost of a Supervisor
             if (clickCounter < costPerSupervisor)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a Supervisor!");
@@ -280,13 +298,13 @@ namespace App2
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
                 txtAmountGainPerSupervisor.Text = AmountGainPerSupervisor.ToString("#,#0");
-
             }
             return;
         }
 
         public async void btnManager_Click(object sender, RoutedEventArgs e)
         {
+            // If money is less than the cost of a Manager
             if (clickCounter < costPerManager)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a Manager!");
@@ -317,6 +335,7 @@ namespace App2
 
         public async void btnSupplier_Click(object sender, RoutedEventArgs e)
         {
+            // If money is less than the cost of a Supplier
             if (clickCounter < costPerSupplier)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a Supplier!");
@@ -332,7 +351,7 @@ namespace App2
                 txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
                 costPerSupplier = costPerSupplier + costPerSupplierIncrease++;
-               // txtC.Text = costPerSupplier.ToString("#,#0");
+                txtCostPerSupplier.Text = costPerSupplier.ToString("#,#0");
 
                 noOfSuppliers = noOfSuppliers + 1;
                 txtNoOfSuppliers.Text = noOfSuppliers.ToString();
@@ -341,13 +360,13 @@ namespace App2
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
 
                 txtAmountGainPerSupplier.Text = AmountGainPerSupplier.ToString("#,#0");
-
             }
             return;
         }
 
         public async void btnManufacturer_Click(object sender, RoutedEventArgs e)
         {
+            // If money is less than the cost of a Manufacturer
             if (clickCounter < costPerManufacturer)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a Boss!");
@@ -377,6 +396,7 @@ namespace App2
         }
         public async void btnBoss_Click(object sender, RoutedEventArgs e)
         {
+            // If money is less than the cost of a Boss
             if (clickCounter < costPerBoss)
             {
                 var dialog = new MessageDialog("You do not have enough money to buy a Boss!" + "THE BUDGET, REMEMBER THE BUDGET!!!");
@@ -432,8 +452,8 @@ namespace App2
                 click = click - 3;
                 clickCounter = clickCounter + (costPerWorker / 2); // so you can't keep buying and selling 
                 txtNoOfWorkers.Text = noOfWorkers.ToString(); // updates no of workers being displayed after changes made
-                txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -456,8 +476,8 @@ namespace App2
                 click = click - 12;
                 clickCounter = clickCounter + (costPerSupervisor / 2); // so you can't keep buying and selling 
                 txtNoOfSupervisors.Text = noOfSupervisors.ToString(); // updates no of supervisors being displayed after changes made
-                txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -480,8 +500,8 @@ namespace App2
                 click = click - 32;
                 clickCounter = clickCounter + (costPerManager / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfManagers.Text = noOfManagers.ToString(); // updates no of managers being displayed after changes made
-                txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -503,8 +523,8 @@ namespace App2
                 click = click - 80;
                 clickCounter = clickCounter + (costPerSupplier / 2); // so you can't keep buying and selling 
                 txtNoOfSuppliers.Text = noOfSuppliers.ToString(); // updates no of suppliers being displayed after changes made
-                txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -527,8 +547,8 @@ namespace App2
                 click = click - costPerBoss;
                 clickCounter = clickCounter + (costPerBoss / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfBosses.Text = noOfBosses.ToString(); // updates no of managers being displayed after changes made
-                txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -551,8 +571,8 @@ namespace App2
                 click = click - costPerManufacturer;
                 clickCounter = clickCounter + (costPerManufacturer / 2); // so you can't keep buying and selling to keep making money
                 txtNoOfManufacturers.Text = noOfManufacturers.ToString(); // updates no of manufacturers being displayed after changes made
-                txtScore.Text = "€   " + clickCounter.ToString(); // updates scores after changes made
-                txtScorePerClick.Text = "€  " + click.ToString(); // updates the scores per click counter 
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0"); // updates scores after changes made
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0"); // updates the scores per click counter 
 
                 totalEmployees = totalEmployees - 1;
                 txtTotalNoOfEmployees.Text = totalEmployees.ToString();
@@ -562,6 +582,7 @@ namespace App2
         ////////////////////////////////////////////////////////////////////////
         //PERKS///////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
+        // Eco Boom Button - Halves cost to hire Workers
         private async void btnPerkEcoBoom_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter > costEcoBoom)
@@ -575,16 +596,16 @@ namespace App2
 
                 clickCounter = clickCounter - costEcoBoom;
 
-                txtCostForWorker.Text = costPerWorker.ToString();
-                txtCostForSupervisor.Text = costPerSupervisor.ToString();
-                txtCostForManager.Text = costPerManager.ToString();
-                txtCostPerSupplier.Text = costPerSupplier.ToString();
-                txtCostPerManufacturer.Text = costPerManufacturer.ToString();
-                txtCostForBoss.Text = costPerBoss.ToString();
-                txtScore.Text = "€   " + clickCounter.ToString();
+                txtCostForWorker.Text = costPerWorker.ToString("#,#0");
+                txtCostForSupervisor.Text = costPerSupervisor.ToString("#,#0");
+                txtCostForManager.Text = costPerManager.ToString("#,#0");
+                txtCostPerSupplier.Text = costPerSupplier.ToString("#,#0");
+                txtCostPerManufacturer.Text = costPerManufacturer.ToString("#,#0");
+                txtCostForBoss.Text = costPerBoss.ToString("#,#0");
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
 
                 btnPerkEcoBoom.IsEnabled = false;
-                btnSupplier.Opacity = 30;
+                btnPerkEcoBoom.Opacity = 30;
 
             }
             else
@@ -594,6 +615,7 @@ namespace App2
             }
         }
 
+        // Extra Time Button - 30 Days
         private async void btnPerkExtraTime_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter >= costExtraTime)
@@ -605,8 +627,7 @@ namespace App2
                 btnPerkExtraTime.IsEnabled = false;
                 btnPerkExtraTime.Opacity = 30;
 
-                txtScore.Text = "€   " + clickCounter.ToString();
-
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
             }
             else
             {
@@ -614,19 +635,19 @@ namespace App2
                 await dialog.ShowAsync();
             }
         }
-
+        // Morale Boost Button - 200% Daily Income
         private async void btnPerkMoraleBoost_Click(object sender, RoutedEventArgs e)
         {
             if (clickCounter >= costMoraleBoost)
             {
                 clickCounter = clickCounter - costMoraleBoost;
                 click = click * 2;
-                txtScorePerClick.Text = "€  " + click.ToString();
+                txtScorePerClick.Text = "€  " + click.ToString("#,#0");
 
                 btnPerkMoraleBoost.IsEnabled = false;
                 btnPerkMoraleBoost.Opacity = 30;
 
-                txtScore.Text = "€   " + clickCounter.ToString();
+                txtScore.Text = "€   " + clickCounter.ToString("#,#0");
             }
             else
             {
@@ -635,42 +656,13 @@ namespace App2
             }
         }
 
-        private async void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-            saves.savedClickCounter = clickCounter;
-            await SaveAsync();
+        //private async void btnSave_Click(object sender, RoutedEventArgs e)
+        //{
+            //saves.savedClickCounter = clickCounter;
+            //await SaveAsync();
             //this.Frame.Navigate(typeof(MainPage));
-        }
-
-        private async Task SaveAsync()
-        {
-            StorageFile userdetailsfile = await ApplicationData.Current.LocalFolder.CreateFileAsync("UserDetails",
-            CreationCollisionOption.ReplaceExisting);
-            IRandomAccessStream raStream = await userdetailsfile.OpenAsync(FileAccessMode.ReadWrite);
-            using (IOutputStream outStream = raStream.GetOutputStreamAt(0))
-            {
-                // Serialize the Session State.
-                DataContractSerializer serializer = new DataContractSerializer(typeof(savedValues));
-                serializer.WriteObject(outStream.AsStreamForWrite(), saves);
-                await outStream.FlushAsync();
-            }
-            var dialog = new MessageDialog("Game is saved!");
-            await dialog.ShowAsync();
-        }
-
-        private async void btnLoad_Click(object sender, RoutedEventArgs e)
-        {
-            StorageFile file = await ApplicationData.Current.LocalFolder.GetFileAsync("UserDetails");
-            if (file == null) return;
-            IRandomAccessStream inStream = await file.OpenReadAsync();
-            // Deserialize the Session State.
-            DataContractSerializer serializer = new DataContractSerializer(typeof(savedValues));
-            var StatsDetails = (savedValues)serializer.ReadObject(inStream.AsStreamForRead());
-            inStream.Dispose();
-            var dialog = new MessageDialog("Game is loaded!");
-            await dialog.ShowAsync();
-        }
-
+        //}
+/*
         private List<Worker> buildObjectGraph()
         {
             var myWorkers = new List<Worker>();
@@ -678,7 +670,30 @@ namespace App2
             myWorkers.Add(new Worker() {savedClickCounter = clickCounter});
             return myWorkers;
         }
+*/
 
+        // Allows the game to take a screenshot of the page as it currently is
+        private async Task<RenderTargetBitmap> CreateBitmapFromElement(FrameworkElement uielement)
+        {
+            try
+            {
+                var renderTargetBitmap = new RenderTargetBitmap();
+                await renderTargetBitmap.RenderAsync(uielement);
+
+                return renderTargetBitmap;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+            }
+            return null;
+        }
+        // When the save button is clicked, a screenshot of the current screen is taken and placed at the bottom corner of the screen
+        private async void btnSave_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.imagePreview.Source = await CreateBitmapFromElement(this);
+        }
+    }
         /*
 private async Task writeXMLAsync()
 {
@@ -706,12 +721,8 @@ private async Task readXMLAsync()
    }
    var dialog = new MessageDialog(content);
    await dialog.ShowAsync();
-
-
-
 }
 */
+} // end of code
 
-    }
-}
 

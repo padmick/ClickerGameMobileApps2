@@ -9,8 +9,8 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>106F0CF4F68967FCC713B3FE666F61B991152C8585FCA12A001A51D3F5E84A95</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>C87955A4A5F3298747C2BD0DF4D360CEFC1F438852FB07B3D8D102B661CDB197</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627_1.0.0.0_x86__xkj04xcm6e7n4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627_xkj04xcm6e7n4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627</RegisteredPackageID>
@@ -19,16 +19,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-03-24T21:51:04.027</Modified>
+      <Modified>2016-04-03T22:18:45.929</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\bin\x86\Debug\App2.exe">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\App2.exe">
       <PackagePath>entrypoint\App2.exe</PackagePath>
-      <Modified>2016-03-24T21:51:03.688</Modified>
+      <Modified>2016-04-03T22:17:11.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -454,91 +454,104 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-01-20T11:32:25.803</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2016-03-02T15:40:52.587</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Images\20euroimage.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\20euroimage.png">
       <PackagePath>Assets\Images\20euroimage.png</PackagePath>
       <Modified>2016-03-24T21:09:06.717</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Images\exitButton.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\exitButton.png">
       <PackagePath>Assets\Images\exitButton.png</PackagePath>
       <Modified>2016-03-07T17:27:53.195</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Images\neongreenrect.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\neongreenrect.png">
       <PackagePath>Assets\Images\neongreenrect.png</PackagePath>
       <Modified>2016-03-24T16:08:09.387</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-04-03T22:01:09.273</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-04-03T22:00:47.362</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\StoreLogo.scale-400 - Copy - Copy.png">
+      <PackagePath>Assets\StoreLogo.scale-400 - Copy - Copy.png</PackagePath>
+      <Modified>2016-04-03T22:01:09.273</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\StoreLogo.scale-400 - Copy.png">
+      <PackagePath>Assets\StoreLogo.scale-400 - Copy.png</PackagePath>
+      <Modified>2016-04-03T22:00:47.362</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-04-03T21:45:44.661</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T21:09:42.000</Modified>
+      <Modified>2016-04-03T21:59:19.275</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T21:09:42.000</Modified>
+      <Modified>2016-04-03T21:44:16.752</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T21:09:42.000</Modified>
+      <Modified>2016-04-03T21:42:42.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-10T21:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T21:09:42.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Wide310x150Logo.scale-200.png">
-      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-10T21:09:42.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Images\50dollarimage.jpg">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\50dollarimage.jpg">
       <PackagePath>Assets\Images\50dollarimage.jpg</PackagePath>
       <Modified>2016-03-24T21:06:44.924</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Images\50euroImage.jpg">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\50euroImage.jpg">
       <PackagePath>Assets\Images\50euroImage.jpg</PackagePath>
       <Modified>2016-03-24T21:06:15.622</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Images\iButton.jpg">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\iButton.jpg">
       <PackagePath>Assets\Images\iButton.jpg</PackagePath>
       <Modified>2016-03-07T15:59:55.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Assets\Images\dollarImage.jpg">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Assets\Images\dollarImage.jpg">
       <PackagePath>Assets\Images\dollarImage.jpg</PackagePath>
       <Modified>2016-03-24T20:58:53.302</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-03-02T15:39:44.581</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\bin\x86\Debug\App2.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\App2.xr.xml">
       <PackagePath>App2.xr.xml</PackagePath>
-      <Modified>2016-03-24T21:41:05.445</Modified>
+      <Modified>2016-04-03T19:17:34.295</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-02-23T15:45:11.445</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-03-24T21:48:15.041</Modified>
+      <Modified>2016-04-03T22:18:45.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Thomas\Documents\Visual Studio 2015\Projects\App2\App2\bin\x86\Debug\Core\App2.exe">
+    <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\Core\App2.exe">
       <PackagePath>App2.exe</PackagePath>
-      <Modified>2016-03-24T21:51:04.004</Modified>
+      <Modified>2016-04-03T22:18:45.926</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

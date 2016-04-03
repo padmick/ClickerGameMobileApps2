@@ -20,6 +20,10 @@ namespace App2
         public App()
         {
             this.InitializeComponent();
+
+            Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
+               Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
+               Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.Suspending += OnSuspending;
         }
 

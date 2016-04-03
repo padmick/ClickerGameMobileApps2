@@ -207,4 +207,19 @@
   <data name="d" xml:space="preserve">
     <value />
   </data>
+  <data name="UidExit.Content" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="UidHelp.Content" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="UidNavNormal.Content" xml:space="preserve">
+    <value>Start Normal Game</value>
+  </data>
+  <data name="UidNavEasy.Content" xml:space="preserve">
+    <value>Start Easy Game</value>
+  </data>
+  <data name="UidNavHard.Content" xml:space="preserve">
+    <value>Start Hard Game</value>
+  </data>
 </root>
