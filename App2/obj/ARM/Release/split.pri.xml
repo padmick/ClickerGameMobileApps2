@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="53702DrCyanide.312675393F5AF" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>UNPLATED</AlternateForm>
+			<Language>EN-US</Language>
+			<Scale>200</Scale>
+			<TargetSize>24</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/App.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="App2.xr.xml" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/App2.xr.xml">
+				<Candidate type="Path">
+					<Value>App2.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ApplicationInsights.config" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/ApplicationInsights.config">
+				<Candidate type="Path">
+					<Value>ApplicationInsights.config</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="GamePage1.xbf" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/GamePage1.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ListOfEmployees.xbf" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/ListOfEmployees.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/MainPage.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square150x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.scale-400 - Copy - Copy.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/StoreLogo.scale-400 - Copy - Copy.png">
+					<Candidate type="Path">
+						<Value>Assets\StoreLogo.scale-400 - Copy - Copy.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.scale-400 - Copy.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/StoreLogo.scale-400 - Copy.png">
+					<Candidate type="Path">
+						<Value>Assets\StoreLogo.scale-400 - Copy.png</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Images">
+					<NamedResource name="20euroimage.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Images/20euroimage.png">
+						<Candidate type="Path">
+							<Value>Assets\Images\20euroimage.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="50dollarimage.jpg" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Images/50dollarimage.jpg">
+						<Candidate type="Path">
+							<Value>Assets\Images\50dollarimage.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="50euroImage.jpg" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Images/50euroImage.jpg">
+						<Candidate type="Path">
+							<Value>Assets\Images\50euroImage.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="dollarImage.jpg" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Images/dollarImage.jpg">
+						<Candidate type="Path">
+							<Value>Assets\Images\dollarImage.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="exitButton.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Images/exitButton.png">
+						<Candidate type="Path">
+							<Value>Assets\Images\exitButton.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="iButton.jpg" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Images/iButton.jpg">
+						<Candidate type="Path">
+							<Value>Assets\Images\iButton.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="neongreenrect.png" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Assets/Images/neongreenrect.png">
+						<Candidate type="Path">
+							<Value>Assets\Images\neongreenrect.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Properties">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/Properties/Default.rd.xml">
+					<Candidate type="Path">
+						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinMetadata">
+				<NamedResource name="Windows.winmd" uri="ms-resource://53702DrCyanide.312675393F5AF/Files/WinMetadata/Windows.winmd">
+					<Candidate type="Path">
+						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Resources">
+			<NamedResource name="d" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/d">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value/>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="UidBoss">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidBoss/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Boss</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidbtnPlayer">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidbtnPlayer/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Work for a Day</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidCostOfPerks">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidCostOfPerks/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Cost Of Perks</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidCostToHire">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidCostToHire/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Cost to Hire</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidDailyIncome">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidDailyIncome/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Daily Income</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidDailyIncome+">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidDailyIncome+/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Daily Income +</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidEcoBoom">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidEcoBoom/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Eco Boom(50% CoH)</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidEmployeeList">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidEmployeeList/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Employee List</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidExit">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidExit/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Exit</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidExtraTime">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidExtraTime/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Extra Time(30 days)</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidGameTitle">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidGameTitle/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>WorkForce Clicker</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidHelp">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidHelp/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Help</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidHome">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidHome/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Home Page</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidLayBoss">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidLayBoss/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Lay Off</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidLayManager">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidLayManager/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Lay Off</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidLayManufacturer">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidLayManufacturer/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Lay Off</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidLaySupervisor">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidLaySupervisor/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Lay Off</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidLaySuppliers">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidLaySuppliers/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Lay Off</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidLayWorker">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidLayWorker/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Lay Off</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidManager">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidManager/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Manager</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidManufacturer">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidManufacturer/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Manufacturer</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidMessageOfTheDay">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidMessageOfTheDay/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Message of the Day</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidMoraleBoost">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidMoraleBoost/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Morale Boost(200% D.I)</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidNavEasy">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidNavEasy/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Start Easy Game</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidNavHard">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidNavHard/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Start Hard Game</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidNavNormal">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidNavNormal/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Start Normal Game</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidPerks">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidPerks/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Perks</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidSave">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidSave/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Save</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidSupervisor">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidSupervisor/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Supervisor</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidSupplier">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidSupplier/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Supplier</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidTotalCapital">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidTotalCapital/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Total Capital</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidTotalDays">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidTotalDays/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Total Days</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidTotalEmployees">
+				<NamedResource name="Text" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidTotalEmployees/Text">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Total Employees</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="UidWorker">
+				<NamedResource name="Content" uri="ms-resource://53702DrCyanide.312675393F5AF/Resources/UidWorker/Content">
+					<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+						<Value>Office Worker</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

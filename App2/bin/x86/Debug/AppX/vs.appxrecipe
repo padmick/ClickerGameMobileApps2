@@ -10,25 +10,25 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>C87955A4A5F3298747C2BD0DF4D360CEFC1F438852FB07B3D8D102B661CDB197</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627_1.0.0.0_x86__xkj04xcm6e7n4</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627_xkj04xcm6e7n4!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>2ceca9a6-9003-4e26-8aa8-7c9fbe7b7627</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Thomas</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredManifestChecksum>691D5D1672897C2F8898500FE5C538BFC5433AAEE7EA6BC037549CDB225ECD6A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>53702DrCyanide.312675393F5AF_1.1.2.0_x86__674zyv5hkqd3y</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>53702DrCyanide.312675393F5AF_674zyv5hkqd3y!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>53702DrCyanide.312675393F5AF</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=C667A899-6410-4174-9BD2-BFDCD5CBA15F</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.2.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-04-03T22:33:23.963</Modified>
+      <Modified>2016-04-04T00:16:43.520</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\App2.exe">
       <PackagePath>entrypoint\App2.exe</PackagePath>
-      <Modified>2016-04-03T22:33:22.872</Modified>
+      <Modified>2016-04-04T00:16:38.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -547,11 +547,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-04-03T22:33:23.575</Modified>
+      <Modified>2016-04-04T00:16:42.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Thomas\documents\visual studio 2015\Projects\App2\App2\bin\x86\Debug\Core\App2.exe">
       <PackagePath>App2.exe</PackagePath>
-      <Modified>2016-04-03T22:33:23.961</Modified>
+      <Modified>2016-04-04T00:16:43.516</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

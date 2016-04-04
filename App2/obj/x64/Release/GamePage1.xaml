@@ -1,0 +1,199 @@
+﻿<Page
+    x:Class="App2.GamePage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <Storyboard x:ConnectionId='1' x:Name="DollarStoryBoard" RepeatBehavior="Forever" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="dollarImage">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="93.175"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="375.807"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="5.069"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="311.685"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="87.62"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="423.485"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="dollarImage">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="266.722"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="325.556"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="445.336"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="530.851"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="640.051"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="866.917"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="dollarimagetwo">
+                <EasingDoubleKeyFrame KeyTime="0" Value="91.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="231.922"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="51.867"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="339.835"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="49.115"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="327.737"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.3" Value="62.329"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.4" Value="215.524"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="dollarimagetwo">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1.388"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="130.804"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="224.031"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="278.869"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="369.363"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="445.528"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.3" Value="570.704"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.4" Value="804.128"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="twentyeuroimage">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="398.678"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="25.241"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="394.543"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.4" Value="23.822"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="413.147"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.9" Value="9.092"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.7" Value="367.742"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.9" Value="26.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.2" Value="411.655"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.4" Value="-55.12"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="twentyeuroimage">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-19.763"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="154.682"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="206.901"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.4" Value="298.681"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="312.245"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.9" Value="404.005"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9.7" Value="432.218"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.9" Value="557.349"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.2" Value="577.578"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.4" Value="759.968"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="fiftyeuroImage">
+                <EasingDoubleKeyFrame KeyTime="0" Value="161.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="27.853"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="325.156"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="19.787"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.9" Value="413.115"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="26.381"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:11.8" Value="399.699"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="71.652"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.6" Value="560.901"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="fiftyeuroImage">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-2.571"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="248.017"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="298.86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="358.679"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.9" Value="366.912"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="480.016"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:11.8" Value="505.571"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="584.043"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13.6" Value="727"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames EnableDependentAnimation="True" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)" Storyboard.TargetName="fiftyeuroImage">
+                <EasingPointKeyFrame KeyTime="0:0:12.3" Value="0.542,0.509"/>
+                <EasingPointKeyFrame KeyTime="0:0:13.6" Value="0.743,0.667"/>
+            </PointAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </Page.Resources>
+
+    <Grid Margin="7.002,-0.001,-168.994,0.001" RenderTransformOrigin="0.150,0.0" UseLayoutRounding="False" d:LayoutRounding="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="284*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <CompositeTransform Rotation="-0.034"/>
+        </Grid.RenderTransform>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <Image x:ConnectionId='2' x:Name="dollarImage" Source="Assets/Images/dollarImage.jpg" Margin="-40,-122,3,0" Opacity="0.8" RenderTransformOrigin="0.542,0.509" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="3" >
+            <Image.RenderTransform>
+                <CompositeTransform/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:ConnectionId='3' x:Name="dollarimagetwo" Source="Assets/Images/50dollarimage.jpg" Margin="-32,-100,3,0" Opacity="0.8" RenderTransformOrigin="0.542,0.509" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="3" >
+            <Image.RenderTransform>
+                <CompositeTransform/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:ConnectionId='4' x:Name="twentyeuroimage" Source="Assets/Images/20euroimage.png" Margin="-32,-80,3,0" Opacity="0.8" RenderTransformOrigin="0.542,0.509" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="3" >
+            <Image.RenderTransform>
+                <CompositeTransform/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:ConnectionId='5' x:Name="fiftyeuroImage" Source="Assets/Images/50euroImage.jpg" Margin="-32,-60,3,0" Opacity="0.8" RenderTransformOrigin="0.542,0.509" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="3" >
+            <Image.RenderTransform>
+                <CompositeTransform/>
+            </Image.RenderTransform>
+        </Image>
+
+        <Button x:ConnectionId='6' x:Name="btnPlayer" x:Uid="UidbtnPlayer" HorizontalAlignment="Left" Margin="1,111,0,0" VerticalAlignment="Top"                         RenderTransformOrigin="-0.627,-0.312" Width="312" FontWeight="Bold" Background="#FF00B4FF" BorderBrush="#FF0A0808" Grid.ColumnSpan="6" Height="32"/>
+        <TextBox x:ConnectionId='7' x:Name="txtScore" Margin="0,31,0,0" TextWrapping="Wrap" Text="�   0" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" FontSize="18" FontWeight="Bold" Height="40" Grid.ColumnSpan="4" HorizontalAlignment="Left" Width="189"/>
+        <Button x:ConnectionId='8' x:Name="btnWorker" x:Uid="UidWorker" Content="" HorizontalAlignment="Left" Margin="0,168,0,0" VerticalAlignment="Top"                         RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFEA6033" FontSize="14" Height="32" Grid.ColumnSpan="3" Width="113"/>
+        <Button x:ConnectionId='9' x:Name="btnManager" x:Uid="UidManager"  Content="" HorizontalAlignment="Left" Margin="0,231,0,0" VerticalAlignment="Top"                          RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FF20B932" Height="29" Grid.ColumnSpan="3" Width="113"/>
+        <Button x:ConnectionId='10' x:Name="btnBoss" x:Uid="UidBoss"  Content="" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top"                       RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFA543C1" Height="32" Grid.ColumnSpan="3" Width="113"/>
+        <Button x:ConnectionId='11' x:Name="btnSupervisor" x:Uid="UidSupervisor" Content="" HorizontalAlignment="Left" Margin="0,200,0,0" VerticalAlignment="Top"                             RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFD8EA25" Height="31" Grid.ColumnSpan="3" Width="113"/>
+        <TextBox x:ConnectionId='12' x:Name="txtScorePerClick" Margin="1,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="29" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3" HorizontalAlignment="Left" Width="140" MinHeight="37" />
+        <TextBlock x:ConnectionId='13' x:Name="textBlock1" x:Uid="UidTotalCapital" Margin="19.425,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" FontSize="17.333" FontWeight="Bold" Grid.Column="3" HorizontalAlignment="Left" Width="114" Grid.ColumnSpan="3"/>
+        <TextBlock x:ConnectionId='14' x:Name="textBlock1_Copy" x:Uid="UidDailyIncome" Margin="17.045,76,17.691,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="15.333" FontWeight="Bold" Text="" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <TextBox x:ConnectionId='15' x:Name="txtCostForWorker" Margin="17,164,0,0" TextWrapping="Wrap" Text="2,000" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="2" HorizontalAlignment="Left" Width="77" Grid.ColumnSpan="3" />
+        <TextBox x:ConnectionId='16' x:Name="txtCostForSupervisor" Margin="17,194,0,0" TextWrapping="Wrap" Text="15,000" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="2" HorizontalAlignment="Left" Width="77" Grid.ColumnSpan="3" />
+        <TextBox x:ConnectionId='17' x:Name="txtCostForManager" Margin="17,225,0,0" TextWrapping="Wrap" Text="35,000" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="2" HorizontalAlignment="Left" Width="77" Grid.ColumnSpan="3" />
+        <TextBox x:ConnectionId='18' x:Name="txtCostForBoss" Margin="17,312,0,0" TextWrapping="Wrap" Text="500,000" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="2" HorizontalAlignment="Left" Width="77" Grid.ColumnSpan="3" />
+        <TextBlock x:ConnectionId='19' x:Name="textBlock1_Copy1" x:Uid="UidEmployeeList" Margin="44,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="10.667" FontWeight="Bold" Grid.Column="5" HorizontalAlignment="Left" Width="80"/>
+        <TextBox x:ConnectionId='20' x:Name="txtNoOfSupervisors" Margin="39,194,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="5" HorizontalAlignment="Left" Width="64"  />
+        <TextBox x:ConnectionId='21' x:Name="txtNoOfManagers" Margin="39,225,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="5" HorizontalAlignment="Left" Width="64"  />
+        <TextBox x:ConnectionId='22' x:Name="txtNoOfBosses" Margin="39,312,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="5" HorizontalAlignment="Left" Width="64"  />
+        <Button x:ConnectionId='23' x:Name="btnNavHomePage" x:Uid="UidHome" HorizontalAlignment="Stretch" Margin="0,582,0,10" VerticalAlignment="Stretch" Background="#FFA2AFF5"                               FontSize="18" BorderBrush="#FF2B2222" Grid.ColumnSpan="2"/>
+        <TextBox x:ConnectionId='24' x:Name="txtNoOfWorkers" Margin="39,165,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" RenderTransformOrigin="-1.787,1.814" Grid.Column="5" HorizontalAlignment="Left" Width="64"  />
+        <Button x:ConnectionId='25' x:Name="btnRelocateWorker" x:Uid="UidLayWorker"  Content="" HorizontalAlignment="Left" Margin="101,165,0,0" VerticalAlignment="Top"                                 RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFEA6033" Height="35" BorderBrush="#FF150505" Grid.Column="5" Width="53" FontSize="9.333"/>
+        <Button x:ConnectionId='26' x:Name="btnRelocateSupervisor" x:Uid="UidLaySupervisor" Content="" HorizontalAlignment="Left" Margin="101,194,0,0" VerticalAlignment="Top"                                     RenderTransformOrigin="-3.478,-0.108" FontWeight="Bold" Background="#FFEA6033" Height="37" BorderBrush="#FF272020" FontSize="9.333" Grid.Column="5" Width="53"/>
+        <Button x:ConnectionId='27' x:Name="btnRelocateManager" x:Uid="UidLayManager"  Content="&#xA;" HorizontalAlignment="Left" Margin="101,222,0,0" VerticalAlignment="Top"                                  RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFEA6033" Height="35" BorderBrush="#FF150606" Grid.Column="5" Width="53" FontSize="9.333"/>
+        <Button x:ConnectionId='28' x:Name="btnRelocateBoss" x:Uid="UidLayBoss" Content="&#xA;" HorizontalAlignment="Left" Margin="101,311,0,0" VerticalAlignment="Top"                               RenderTransformOrigin="-0.627,-0.312" Width="53" FontWeight="Bold" Background="#FFEA6033" Height="33" BorderBrush="#FF210E0E" Grid.Column="5" FontSize="9.333"/>
+        <TextBlock x:ConnectionId='29' x:Name="textBlock1_Copy2" x:Uid="UidCostToHire" Margin="17,147,15,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="10.667" FontWeight="Bold" Text="" Grid.Column="2" HorizontalAlignment="Stretch" Width="Auto" Grid.ColumnSpan="2"/>
+        <Button x:ConnectionId='30' x:Name="btnSupplier" x:Uid="UidSupplier"  Content="" HorizontalAlignment="Left" Margin="0,260,0,0" VerticalAlignment="Top"                           RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FF2ECFDA" Height="30" Grid.ColumnSpan="3" Width="113"/>
+        <TextBox x:ConnectionId='31' x:Name="txtCostPerSupplier" Margin="17,254,0,0" TextWrapping="Wrap" Text="125,000" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="2" HorizontalAlignment="Left" Width="77" Grid.ColumnSpan="3"/>
+        <TextBox x:ConnectionId='32' x:Name="txtNoOfSuppliers" Margin="39,254,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="5" HorizontalAlignment="Left" Width="64"  />
+        <Button x:ConnectionId='33' x:Name="btnRelocateSuppliers" x:Uid="UidLaySuppliers"  Content="&#xA;" HorizontalAlignment="Left" Margin="101,253,0,0" VerticalAlignment="Top"                                   RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFEA6033" Height="33" BorderBrush="#FF270909" Grid.Column="5" Width="53" FontSize="9.333"/>
+        <TextBox x:ConnectionId='34' x:Name="txtTotalNoOfDays" HorizontalAlignment="Left" Margin="74.309,111,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="92" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" FontWeight="Bold" FontSize="18" BorderThickness="2" RenderTransformOrigin="0.501,0.347" Grid.Column="5" />
+        <TextBlock x:ConnectionId='35' x:Name="textBlock1_Copy3" x:Uid="UidTotalDays" Margin="165.309,114,-10.008,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="13.333" FontWeight="Bold" Grid.Column="5" HorizontalAlignment="Left" Width="126"/>
+        <Button x:ConnectionId='36' x:Name="btnManufacturer" x:Uid="UidManufacturer" HorizontalAlignment="Left" Margin="0,287,0,0" VerticalAlignment="Top"                               RenderTransformOrigin="-0.627,-0.312" FontWeight="Bold" Background="#FFD42C53" FontSize="14.333" Height="32" Grid.ColumnSpan="3" Width="113"/>
+        <TextBox x:ConnectionId='37' x:Name="txtCostPerManufacturer" Margin="17,283,0,0" TextWrapping="Wrap" Text="240,000" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="2" HorizontalAlignment="Left" Width="77" Grid.ColumnSpan="3" />
+        <TextBox x:ConnectionId='38' x:Name="txtNoOfManufacturers" Margin="39,283,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" Grid.Column="5" HorizontalAlignment="Left" Width="64"  />
+        <Button x:ConnectionId='39' x:Name="btnRelocateManufacturer" x:Uid="UidLayManufacturer" HorizontalAlignment="Left" Margin="101,283,0,0" VerticalAlignment="Top"                                       RenderTransformOrigin="0.522,-0.493" Width="53" FontWeight="Bold" Background="#FFEA6033" Height="34" BorderBrush="#FF2B1717" Grid.Column="5" FontSize="9.333"/>
+        <TextBox x:ConnectionId='40' x:Name="txtAmountGainPerWorker" HorizontalAlignment="Left" Margin="0,164,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="34" RenderTransformOrigin="0.567,-1.062" Grid.Column="4" Grid.ColumnSpan="2"  />
+        <TextBlock x:ConnectionId='41' x:Name="textBlock1_Copy5" x:Uid="UidDailyIncome+" Margin="3,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="10.667" FontWeight="Bold" Grid.Column="4" HorizontalAlignment="Left" Width="102" Grid.ColumnSpan="2"/>
+        <TextBox x:ConnectionId='42' x:Name="txtAmountGainPerSupervisor" HorizontalAlignment="Left" Margin="0,194,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" RenderTransformOrigin="0.567,-1.062" Grid.Column="4" Grid.ColumnSpan="2"  />
+        <TextBox x:ConnectionId='43' x:Name="txtAmountGainPerManager" HorizontalAlignment="Left" Margin="0,224,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" RenderTransformOrigin="0.567,-1.062" Grid.Column="4" Grid.ColumnSpan="2"  />
+        <TextBox x:ConnectionId='44' x:Name="txtAmountGainPerSupplier" HorizontalAlignment="Left" Margin="0,253,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" RenderTransformOrigin="0.567,-1.062" Grid.Column="4" Grid.ColumnSpan="2"  />
+        <TextBox x:ConnectionId='45' x:Name="txtAmountGainPerManufacturer" HorizontalAlignment="Left" Margin="0,283,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Height="32" RenderTransformOrigin="0.567,-1.062" Grid.Column="4" Grid.ColumnSpan="2"  />
+        <TextBox x:ConnectionId='46' x:Name="txtAmountGainPerBoss" HorizontalAlignment="Left" Margin="0,311,0,0" TextWrapping="Wrap" Text="0" Width="84" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" RenderTransformOrigin="0.567,-1.062" BorderThickness="2" Grid.Column="4" Height="32" VerticalAlignment="Top" Grid.ColumnSpan="2"  />
+        <Button x:ConnectionId='47' x:Name="btnSave" x:Uid="UidSave" HorizontalAlignment="Stretch" Margin="36,596,0,10" VerticalAlignment="Stretch" Background="#FF5F9B49" FontSize="18" BorderBrush="#FF2B2222" Grid.Column="2" Width="Auto" Grid.ColumnSpan="2"                        />
+        <TextBox x:ConnectionId='48' x:Name="txtTotalNoOfEmployees" Margin="36.91,70,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" IsReadOnly="True" Background="#FF9B9B9B" BorderBrush="#FF230505" Foreground="#FF041125" Height="32" BorderThickness="3,2,2,2" Grid.Column="4" HorizontalAlignment="Left" Width="85" Grid.ColumnSpan="2"  />
+        <TextBlock x:ConnectionId='49' x:Name="textBlock1_Copy4" x:Uid="UidTotalEmployees" Margin="78.309,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="15.333" FontWeight="Bold" Text="" Grid.Column="5" HorizontalAlignment="Left" Width="120"/>
+        <TextBlock x:ConnectionId='50' x:Name="textBlock1_Copy6" x:Uid="UidPerks" Margin="3,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="15.333" FontWeight="Bold" Text="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="94"/>
+        <Button x:ConnectionId='51' x:Name="btnPerkEcoBoom" x:Uid="UidEcoBoom" HorizontalAlignment="Left" Margin="0,401,0,0" VerticalAlignment="Top" Background="#FFF6A537" BorderBrush="#FF1F0404" BorderThickness="2"                              FontSize="9.333" Grid.ColumnSpan="2" Width="103" Height="32"/>
+        <TextBox x:ConnectionId='52' x:Name="txtCostEcoBoom" Margin="32,401,0,0" TextWrapping="Wrap" Text="400,000" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Grid.Column="2" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="77" Grid.ColumnSpan="3" />
+        <TextBlock x:ConnectionId='53' x:Name="textBlock1_Copy7" x:Uid="UidCostOfPerks" Margin="32,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" FontSize="15.333" FontWeight="Bold" Text="" Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Left" Width="112"/>
+        <Button x:ConnectionId='54' x:Name="btnPerkExtraTime" x:Uid="UidExtraTime" HorizontalAlignment="Left" Margin="0,433,0,0" VerticalAlignment="Top" Background="#FFE537F6" BorderBrush="#FF1F0404" BorderThickness="2"                                FontSize="9.333" Grid.ColumnSpan="2" Width="103" Height="32"/>
+        <TextBox x:ConnectionId='55' x:Name="txtCostExtraTime" Margin="32,433,0,0" TextWrapping="Wrap" Text="150,000" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Grid.Column="2" HorizontalAlignment="Left" Width="77" Height="32" VerticalAlignment="Top" Grid.ColumnSpan="3" />
+        <Button x:ConnectionId='56' x:Name="btnPerkMoraleBoost" x:Uid="UidMoraleBoost" HorizontalAlignment="Left" Margin="0,465,0,0" VerticalAlignment="Top" Background="#FF4AD63C" BorderBrush="#FF1F0404" BorderThickness="2"                                  FontSize="9.333" Grid.ColumnSpan="2" Width="103" Height="32"/>
+        <TextBox x:ConnectionId='57' x:Name="txtCostMoraleBoost" Margin="32,465,0,0" TextWrapping="Wrap" Text="250,000" IsReadOnly="True" Background="#FFA89B9B" BorderBrush="#FF4F3434" Foreground="#FF041125" Grid.Column="2" HorizontalAlignment="Left" Width="77" Height="32" VerticalAlignment="Top" Grid.ColumnSpan="3" />
+        <TextBox x:ConnectionId='58' x:Name="txtMessageBoard" Margin="1.309,378,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;&#xD;&#xA;" FontSize="12" IsReadOnly="True" BorderBrush="#FF151212" Background="#FF70706D" Grid.Column="5" Height="118" VerticalAlignment="Top" HorizontalAlignment="Left" Width="190"/>
+        <TextBlock x:ConnectionId='59' x:Name="textBlock1_Copy8" x:Uid="UidMessageOfTheDay" HorizontalAlignment="Left" Margin="4.309,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="185" FontSize="15.333" FontWeight="Bold" Text="" Grid.Column="5"/>
+        <Image x:ConnectionId='60' x:Name="imagePreview"
+           Height="139" Width="165" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="5" Margin="1.309,0,0,0"/>
+    </Grid>
+</Page>
+

@@ -1,0 +1,3 @@
+Language=FR-FR
+Scale=100
+Scale=400
